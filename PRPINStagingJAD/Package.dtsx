@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{7672B612-0BB2-45DD-A619-2C3C8E39587F}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{47F93713-E83A-4830-8993-E5150E526B4B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -11903,7 +11903,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_FinancialSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_FinancialSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_FinancialSTG](&#xA; ID&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_ID&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_PROPERTY&#x9; VARCHAR(MAX) NULL,&#xA;SPOUSE_EMPLOYER&#x9; VARCHAR(MAX) NULL,&#xA;EXPLAIN_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;EXPENSE_COMMENT&#x9; VARCHAR(MAX) NULL,&#xA;INCOME_COMMENT&#x9; VARCHAR(MAX) NULL,&#xA;TOTAL_MONTHLY_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;PRIMARY_INCOME_SOURCE&#x9; VARCHAR(MAX) NULL,&#xA;PRIMARY_INCOME_SOURCE_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PRIMARY_INCOME_IND&#x9; VARCHAR(MAX) NULL,&#xA;DEF_INCOME&#x9;DATETIME NULL,&#xA;SPOUSE_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;FINANCIAL_IND&#x9; VARCHAR(MAX) NULL,&#xA;TOTAL_MONTHLY_EXPENSES&#x9; VARCHAR(MAX) NULL,&#xA;CONTINUE_IND&#x9; VARCHAR(MAX) NULL,&#xA;ASSET_COMMENT&#x9; VARCHAR(MAX) NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL&#xA;&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_FinancialSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_FinancialSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_FinancialSTG](&#xA; ID&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_ID&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_PROPERTY&#x9; VARCHAR(MAX) NULL,&#xA;SPOUSE_EMPLOYER&#x9; VARCHAR(MAX) NULL,&#xA;EXPLAIN_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;EXPENSE_COMMENT&#x9; VARCHAR(MAX) NULL,&#xA;INCOME_COMMENT&#x9; VARCHAR(MAX) NULL,&#xA;TOTAL_MONTHLY_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;PRIMARY_INCOME_SOURCE&#x9; VARCHAR(MAX) NULL,&#xA;PRIMARY_INCOME_SOURCE_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PRIMARY_INCOME_IND&#x9; VARCHAR(MAX) NULL,&#xA;DEF_INCOME&#x9;VARCHAR(MAX) NULL,&#xA;SPOUSE_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;FINANCIAL_IND&#x9; VARCHAR(MAX) NULL,&#xA;TOTAL_MONTHLY_EXPENSES&#x9; VARCHAR(MAX) NULL,&#xA;CONTINUE_IND&#x9; VARCHAR(MAX) NULL,&#xA;ASSET_COMMENT&#x9; VARCHAR(MAX) NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL&#xA;&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -13101,6 +13101,715 @@
           version="1">
           <components>
             <component
+              refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ID"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[INTERVIEW_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="INTERVIEW_ID"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_ID]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PROBATION_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PROBATION_IND"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PAROLE_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PAROLE_IND"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[BOND_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="BOND_IND"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BOND_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[CREATEDATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CREATEDATE"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATEDATE]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[CREATEUSER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="CREATEUSER"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATEUSER]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[UPDATEDATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UPDATEDATE"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATEDATE]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[UPDATEUSER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="UPDATEUSER"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATEUSER]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ROWSTATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="ROWSTATUS"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ROWSTATUS]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PROBATION_IND_DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="PROBATION_IND_DESCRIPTION"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_IND_DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PAROLE_IND_DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="PAROLE_IND_DESCRIPTION"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND_DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PRIOR_CRIM_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PRIOR_CRIM_IND"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_CRIM_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PRIOR_JUV_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PRIOR_JUV_IND"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_JUV_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[WHEN_LEFT_GANG]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WHEN_LEFT_GANG"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[WHEN_LEFT_GANG]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[CCH_COMMENTS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CCH_COMMENTS"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CCH_COMMENTS]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[GANG_IND]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GANG_IND"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[GANG_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[GANG_IND_DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="GANG_IND_DESCRIPTION"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[GANG_IND_DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PRIOR_CONVICTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PRIOR_CONVICTION"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_CONVICTION]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[CONTACTED_ATTORNEY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CONTACTED_ATTORNEY"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTED_ATTORNEY]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[GANG_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="GANG_NAME"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[GANG_NAME]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[CRIM_CONV_REPORTED]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CRIM_CONV_REPORTED"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRIM_CONV_REPORTED]" />
+                    <inputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[JUV_ADJ_REPORTED]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="JUV_ADJ_REPORTED"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUV_ADJ_REPORTED]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ID]"
+                      name="Copy of ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of INTERVIEW_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of INTERVIEW_ID]"
+                      name="Copy of INTERVIEW_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PROBATION_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PROBATION_IND]"
+                      name="Copy of PROBATION_IND"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_IND]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PAROLE_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PAROLE_IND]"
+                      name="Copy of PAROLE_IND"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BOND_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BOND_IND]"
+                      name="Copy of BOND_IND"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BOND_IND]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CREATEDATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CREATEDATE]"
+                      name="Copy of CREATEDATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATEDATE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CREATEUSER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CREATEUSER]"
+                      name="Copy of CREATEUSER"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATEUSER]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of UPDATEDATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of UPDATEDATE]"
+                      name="Copy of UPDATEDATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATEDATE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of UPDATEUSER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of UPDATEUSER]"
+                      name="Copy of UPDATEUSER"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATEUSER]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ROWSTATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ROWSTATUS]"
+                      name="Copy of ROWSTATUS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ROWSTATUS]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PROBATION_IND_DESCRIPTION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PROBATION_IND_DESCRIPTION]"
+                      name="Copy of PROBATION_IND_DESCRIPTION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_IND_DESCRIPTION]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PAROLE_IND_DESCRIPTION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PAROLE_IND_DESCRIPTION]"
+                      name="Copy of PAROLE_IND_DESCRIPTION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND_DESCRIPTION]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRIOR_CRIM_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRIOR_CRIM_IND]"
+                      name="Copy of PRIOR_CRIM_IND"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_CRIM_IND]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRIOR_JUV_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRIOR_JUV_IND]"
+                      name="Copy of PRIOR_JUV_IND"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_JUV_IND]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WHEN_LEFT_GANG]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WHEN_LEFT_GANG]"
+                      name="Copy of WHEN_LEFT_GANG"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[WHEN_LEFT_GANG]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CCH_COMMENTS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CCH_COMMENTS]"
+                      name="Copy of CCH_COMMENTS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CCH_COMMENTS]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of GANG_IND]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of GANG_IND]"
+                      name="Copy of GANG_IND"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[GANG_IND]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of GANG_IND_DESCRIPTION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of GANG_IND_DESCRIPTION]"
+                      name="Copy of GANG_IND_DESCRIPTION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[GANG_IND_DESCRIPTION]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRIOR_CONVICTION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRIOR_CONVICTION]"
+                      name="Copy of PRIOR_CONVICTION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_CONVICTION]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CONTACTED_ATTORNEY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CONTACTED_ATTORNEY]"
+                      name="Copy of CONTACTED_ATTORNEY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTED_ATTORNEY]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of GANG_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of GANG_NAME]"
+                      name="Copy of GANG_NAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[GANG_NAME]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CRIM_CONV_REPORTED]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CRIM_CONV_REPORTED]"
+                      name="Copy of CRIM_CONV_REPORTED"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRIM_CONV_REPORTED]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JUV_ADJ_REPORTED]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JUV_ADJ_REPORTED]"
+                      name="Copy of JUV_ADJ_REPORTED"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUV_ADJ_REPORTED]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -13174,31 +13883,41 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="ID"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]" />
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_ID]"
-                      cachedDataType="i4"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="INTERVIEW_ID"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_ID]" />
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PROBATION_IND]"
-                      cachedDataType="bool"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="PROBATION_IND"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_IND]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_IND]" />
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PAROLE_IND]"
-                      cachedDataType="bool"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="PAROLE_IND"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_IND]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND]" />
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BOND_IND]"
-                      cachedDataType="bool"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="BOND_IND"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BOND_IND]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BOND_IND]" />
@@ -13256,13 +13975,17 @@
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND_DESCRIPTION]" />
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PRIOR_CRIM_IND]"
-                      cachedDataType="bool"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="PRIOR_CRIM_IND"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIOR_CRIM_IND]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_CRIM_IND]" />
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PRIOR_JUV_IND]"
-                      cachedDataType="bool"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="PRIOR_JUV_IND"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIOR_JUV_IND]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_JUV_IND]" />
@@ -13300,13 +14023,17 @@
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[GANG_IND_DESCRIPTION]" />
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PRIOR_CONVICTION]"
-                      cachedDataType="bool"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="PRIOR_CONVICTION"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIOR_CONVICTION]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_CONVICTION]" />
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CONTACTED_ATTORNEY]"
-                      cachedDataType="bool"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="CONTACTED_ATTORNEY"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTED_ATTORNEY]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTED_ATTORNEY]" />
@@ -13320,13 +14047,17 @@
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[GANG_NAME]" />
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CRIM_CONV_REPORTED]"
-                      cachedDataType="bool"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="CRIM_CONV_REPORTED"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRIM_CONV_REPORTED]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRIM_CONV_REPORTED]" />
                     <inputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JUV_ADJ_REPORTED]"
-                      cachedDataType="bool"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="JUV_ADJ_REPORTED"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JUV_ADJ_REPORTED]"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUV_ADJ_REPORTED]" />
@@ -13345,8 +14076,7 @@
                       name="INTERVIEW_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="PROBATION_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_IND]"
@@ -13537,46 +14267,56 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]"
                       name="ID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_ID]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[INTERVIEW_ID]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_ID]"
                       name="INTERVIEW_ID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_IND]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PROBATION_IND]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_IND]"
                       name="PROBATION_IND"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PAROLE_IND]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND]"
                       name="PAROLE_IND"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BOND_IND]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BOND_IND]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BOND_IND]"
                       name="BOND_IND"
                       truncationRowDisposition="FailComponent" />
@@ -13655,19 +14395,23 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_CRIM_IND]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PRIOR_CRIM_IND]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_CRIM_IND]"
                       name="PRIOR_CRIM_IND"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_JUV_IND]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PRIOR_JUV_IND]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_JUV_IND]"
                       name="PRIOR_JUV_IND"
                       truncationRowDisposition="FailComponent" />
@@ -13717,19 +14461,23 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_CONVICTION]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PRIOR_CONVICTION]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRIOR_CONVICTION]"
                       name="PRIOR_CONVICTION"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTED_ATTORNEY]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CONTACTED_ATTORNEY]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTED_ATTORNEY]"
                       name="CONTACTED_ATTORNEY"
                       truncationRowDisposition="FailComponent" />
@@ -13746,19 +14494,23 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRIM_CONV_REPORTED]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CRIM_CONV_REPORTED]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CRIM_CONV_REPORTED]"
                       name="CRIM_CONV_REPORTED"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUV_ADJ_REPORTED]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JUV_ADJ_REPORTED]"
+                      length="50"
                       lineageId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUV_ADJ_REPORTED]"
                       name="JUV_ADJ_REPORTED"
                       truncationRowDisposition="FailComponent" />
@@ -14047,8 +14799,13 @@
           </components>
           <paths>
             <path
-              refId="Package\vBM_ReportedRecord Data Flow Task.Paths[OLE DB Source Output]"
+              refId="Package\vBM_ReportedRecord Data Flow Task.Paths[Data Conversion Output]"
               endId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\vBM_ReportedRecord Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\vBM_ReportedRecord Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -14069,7 +14826,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_ReportedRecordSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_ReportedRecordSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_ReportedRecordSTG](&#xA; ID&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_ID&#x9; VARCHAR(MAX) NULL,&#xA;PROBATION_IND&#x9; VARCHAR(MAX) NULL,&#xA;PROBATION_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PAROLE_IND&#x9; VARCHAR(MAX) NULL,&#xA;PAROLE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PRIOR_CRIM_IND&#x9; VARCHAR(MAX) NULL,&#xA;PRIOR_JUV_IND&#x9; VARCHAR(MAX) NULL,&#xA;WHEN_LEFT_GANG&#x9; VARCHAR(MAX) NULL,&#xA;CCH_COMMENTS&#x9; VARCHAR(MAX) NULL,&#xA;GANG_IND&#x9; VARCHAR(MAX) NULL,&#xA;GANG_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;BOND_IND&#x9; VARCHAR(MAX) NULL,&#xA;PRIOR_CONVICTION&#x9; VARCHAR(MAX) NULL,&#xA;CONTACTED_ATTORNEY&#x9; VARCHAR(MAX) NULL,&#xA;GANG_NAME&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL,&#xA;CRIM_CONV_REPORTED&#x9; VARCHAR(MAX) NULL,&#xA;JUV_ADJ_REPORTED&#x9; VARCHAR(MAX) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_ReportedRecordSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_ReportedRecordSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_ReportedRecordSTG](&#xA; ID&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_ID&#x9; VARCHAR(MAX) NULL,&#xA;PROBATION_IND&#x9; vARCHAR(MAX) NULL,&#xA;PROBATION_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PAROLE_IND&#x9; VARCHAR(MAX) NULL,&#xA;PAROLE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PRIOR_CRIM_IND&#x9; VARCHAR(MAX) NULL,&#xA;PRIOR_JUV_IND&#x9; VARCHAR(MAX) NULL,&#xA;WHEN_LEFT_GANG&#x9; VARCHAR(MAX) NULL,&#xA;CCH_COMMENTS&#x9; VARCHAR(MAX) NULL,&#xA;GANG_IND&#x9; VARCHAR(MAX) NULL,&#xA;GANG_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;BOND_IND&#x9; VARCHAR(MAX) NULL,&#xA;PRIOR_CONVICTION&#x9; VARCHAR(MAX) NULL,&#xA;CONTACTED_ATTORNEY&#x9; VARCHAR(MAX) NULL,&#xA;GANG_NAME&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL,&#xA;CRIM_CONV_REPORTED&#x9; VARCHAR(MAX) NULL,&#xA;JUV_ADJ_REPORTED&#x9; VARCHAR(MAX) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -15130,11 +15887,11 @@
         <NodeLayout
           Size="212,42"
           Id="Package\vBM_FinancialSTG SQL Task"
-          TopLeft="26,293" />
+          TopLeft="22.25,289.25" />
         <NodeLayout
           Size="240,42"
           Id="Package\vBM_FinancialSTG Data Flow Task"
-          TopLeft="364,298" />
+          TopLeft="360.25,294.25" />
         <NodeLayout
           Size="231,42"
           Id="Package\vBM_FinancialItem SQL Task"
@@ -15167,7 +15924,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1 2]"
-          TopLeft="238,316.5">
+          TopLeft="234.25,312.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15754,7 +16511,7 @@
     design-time-name="Package\vBM_ReportedRecord Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination"
@@ -15762,21 +16519,71 @@
         <NodeLayout
           Size="150,42"
           Id="Package\vBM_ReportedRecord Data Flow Task\OLE DB Source"
-          TopLeft="219,150" />
+          TopLeft="224,149" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\vBM_ReportedRecord Data Flow Task\Data Conversion"
+          TopLeft="407,82" />
         <EdgeLayout
           Id="Package\vBM_ReportedRecord Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="369,171.5">
+          TopLeft="299,149">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="212,0"
+              EndConnector="161.333333333333,-25"
               Start="0,0"
-              End="204.5,0">
+              End="161.333333333333,-17.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="204.5,0" />
+                    End="0,-10.8477157360406" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-10.8477157360406"
+                    Point2="0,-14.8477157360406"
+                    Point3="4,-14.8477157360406" />
+                  <mssgle:LineSegment
+                    End="157.333333333333,-14.8477157360406" />
+                  <mssgle:CubicBezierSegment
+                    Point1="157.333333333333,-14.8477157360406"
+                    Point2="161.333333333333,-14.8477157360406"
+                    Point3="161.333333333333,-18.8477157360406" />
+                  <mssgle:LineSegment
+                    End="161.333333333333,-17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\vBM_ReportedRecord Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="509.666666666667,124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="156.833333333333,27"
+              Start="0,0"
+              End="156.833333333333,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,6.96446700507615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,6.96446700507615"
+                    Point2="0,10.9644670050761"
+                    Point3="4,10.9644670050761" />
+                  <mssgle:LineSegment
+                    End="152.833333333333,10.9644670050761" />
+                  <mssgle:CubicBezierSegment
+                    Point1="152.833333333333,10.9644670050761"
+                    Point2="156.833333333333,10.9644670050761"
+                    Point3="156.833333333333,14.9644670050761" />
+                  <mssgle:LineSegment
+                    End="156.833333333333,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
