@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "PRPINStagingJAD", "PRPINStagingJAD\PRPINStagingJAD.dtproj", "{E0EA0271-ABF5-4E28-8E7B-12B69E51F32D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0EA0271-ABF5-4E28-8E7B-12B69E51F32D}.Development|Default.ActiveCfg = Development
+		{E0EA0271-ABF5-4E28-8E7B-12B69E51F32D}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2DCA8F5-A0C3-4C89-8327-7BC0CE165816}
+	EndGlobalSection
+EndGlobal
