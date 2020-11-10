@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/10/2020 12:08:36 PM"
@@ -11,9 +11,2161 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionGUID="{9B458B82-73F2-4106-BCAF-42BFBD48CE30}">
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{F3340AD9-4575-4B18-A416-52C847FE281B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SVDJADOADB1.hco.hc.hctx.net.JADEDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
+      DTS:ObjectName="SVDJADOADB1.hco.hc.hctx.net.JADEDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SVDJADOADB1.hco.hc.hctx.net;Initial Catalog=JADEDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SVPEASDBW.PRPIN]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B732BF5E-B71C-4192-8B0D-058F16472F78}"
+      DTS:ObjectName="SVPEASDBW.PRPIN">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SVPEASDBW;Initial Catalog=PRPIN;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\vBM_ComputerRecord Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{BF7D7E25-6FE4-4164-9B66-256BCAD4E97D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="vBM_ComputerRecord Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[PRPIN].[vBM_ComputerRecordSTG]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SVDJADOADB1.hco.hc.hctx.net.JADEDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[SVDJADOADB1.hco.hc.hctx.net.JADEDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_ID]"
+                      cachedDataType="i4"
+                      cachedName="INTERVIEW_ID"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_ID]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NIT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="NIT"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NIT]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NIT]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RUN_BY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="RUN_BY"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RUN_BY]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RUN_BY]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NUM_FEL_CONV]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="NUM_FEL_CONV"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_FEL_CONV]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_FEL_CONV]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NUM_MISD_CONV]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="NUM_MISD_CONV"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_MISD_CONV]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_MISD_CONV]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NUM_ARRESTS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="NUM_ARRESTS"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_ARRESTS]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_ARRESTS]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FIRST_JIMS_CHECK_BY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="FIRST_JIMS_CHECK_BY"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_JIMS_CHECK_BY]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIRST_JIMS_CHECK_BY]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TCIC_HISTORY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="TCIC_HISTORY"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TCIC_HISTORY]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TCIC_HISTORY]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TCIC_WARRANT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="TCIC_WARRANT"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TCIC_WARRANT]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TCIC_WARRANT]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NCIC_HISTORY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="NCIC_HISTORY"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_HISTORY]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_HISTORY]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NCIC_WARRANT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="NCIC_WARRANT"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_WARRANT]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_WARRANT]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FIRST_JIMS_CHECK_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FIRST_JIMS_CHECK_DATE"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_JIMS_CHECK_DATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIRST_JIMS_CHECK_DATE]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NCIC_TCIC_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="NCIC_TCIC_DATE"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_TCIC_DATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_TCIC_DATE]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FIRST_JIMS_CHECK_LOCATION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FIRST_JIMS_CHECK_LOCATION"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_JIMS_CHECK_LOCATION]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIRST_JIMS_CHECK_LOCATION]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NCIC_TCIC_LOCATION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NCIC_TCIC_LOCATION"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_TCIC_LOCATION]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_TCIC_LOCATION]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NUM_CLASS_C]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="NUM_CLASS_C"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_CLASS_C]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_CLASS_C]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RUN_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RUN_DATE"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RUN_DATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RUN_DATE]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[COMMENTS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="COMMENTS"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMMENTS]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[COMMENTS]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SECOND_JIMS_CHECK_BY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="SECOND_JIMS_CHECK_BY"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SECOND_JIMS_CHECK_BY]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SECOND_JIMS_CHECK_BY]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SECOND_JIMS_CHECK_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SECOND_JIMS_CHECK_DATE"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SECOND_JIMS_CHECK_DATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SECOND_JIMS_CHECK_DATE]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SECOND_JIMS_CHECK_LOCATION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SECOND_JIMS_CHECK_LOCATION"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SECOND_JIMS_CHECK_LOCATION]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SECOND_JIMS_CHECK_LOCATION]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PROBATION_IND]"
+                      cachedDataType="bool"
+                      cachedName="PROBATION_IND"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PAROLE_IND]"
+                      cachedDataType="bool"
+                      cachedName="PAROLE_IND"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[HOLD_IND]"
+                      cachedDataType="bool"
+                      cachedName="HOLD_IND"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOLD_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HOLD_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FUGITIVE_IND]"
+                      cachedDataType="bool"
+                      cachedName="FUGITIVE_IND"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FUGITIVE_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FUGITIVE_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FAIL_TO_APPEAR_IND]"
+                      cachedDataType="bool"
+                      cachedName="FAIL_TO_APPEAR_IND"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FAIL_TO_APPEAR_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FAIL_TO_APPEAR_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BOND_IND]"
+                      cachedDataType="bool"
+                      cachedName="BOND_IND"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BOND_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BOND_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[HPD_NUMBER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="HPD_NUMBER"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HPD_NUMBER]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HPD_NUMBER]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SO_NUMBER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="SO_NUMBER"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SO_NUMBER]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SO_NUMBER]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CCH_CORRECT_NEEDED]"
+                      cachedDataType="bool"
+                      cachedName="CCH_CORRECT_NEEDED"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CCH_CORRECT_NEEDED]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CCH_CORRECT_NEEDED]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UPDATED_BY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="80"
+                      cachedName="UPDATED_BY"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATED_BY]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATED_BY]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[REG_SEX_OFFENDER]"
+                      cachedDataType="bool"
+                      cachedName="REG_SEX_OFFENDER"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REG_SEX_OFFENDER]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[REG_SEX_OFFENDER]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UNDER_PROTECTIVE_ORDER]"
+                      cachedDataType="bool"
+                      cachedName="UNDER_PROTECTIVE_ORDER"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UNDER_PROTECTIVE_ORDER]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UNDER_PROTECTIVE_ORDER]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UNKNOWN_OFF_LVL_CONV]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="UNKNOWN_OFF_LVL_CONV"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UNKNOWN_OFF_LVL_CONV]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UNKNOWN_OFF_LVL_CONV]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[HANDGUN_LICENSE]"
+                      cachedDataType="bool"
+                      cachedName="HANDGUN_LICENSE"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HANDGUN_LICENSE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HANDGUN_LICENSE]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PROBATION_COMMENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="PROBATION_COMMENT"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_COMMENT]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_COMMENT]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PAROLE_COMMENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="PAROLE_COMMENT"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_COMMENT]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_COMMENT]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ONBOND_COMMENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="ONBOND_COMMENT"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ONBOND_COMMENT]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ONBOND_COMMENT]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[HOLDS_COMMENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="HOLDS_COMMENT"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOLDS_COMMENT]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HOLDS_COMMENT]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FUGITIVE_WAR_COMMENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="FUGITIVE_WAR_COMMENT"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FUGITIVE_WAR_COMMENT]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FUGITIVE_WAR_COMMENT]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PREV_FTA_COMMENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="PREV_FTA_COMMENT"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PREV_FTA_COMMENT]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PREV_FTA_COMMENT]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NUM_VIOLENT_CONV]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="NUM_VIOLENT_CONV"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_VIOLENT_CONV]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_VIOLENT_CONV]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NUM_JUVENILE_DISP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="NUM_JUVENILE_DISP"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_JUVENILE_DISP]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_JUVENILE_DISP]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FBI_NUM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="FBI_NUM"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FBI_NUM]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FBI_NUM]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SID"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SID]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SID]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ADDRESS_CHECKED]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="ADDRESS_CHECKED"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESS_CHECKED]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESS_CHECKED]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CREATEDATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CREATEDATE"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATEDATE]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CREATEUSER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="CREATEUSER"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEUSER]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATEUSER]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UPDATEDATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UPDATEDATE"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEDATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATEDATE]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UPDATEUSER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="UPDATEUSER"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEUSER]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATEUSER]" />
+                    <inputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ROWSTATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="ROWSTATUS"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWSTATUS]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ROWSTATUS]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      codePage="1252"
+                      dataType="text"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
+                      codePage="1252"
+                      dataType="text"
+                      name="INTERVIEW_ID" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NIT]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NIT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RUN_BY]"
+                      codePage="1252"
+                      dataType="text"
+                      name="RUN_BY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_FEL_CONV]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NUM_FEL_CONV" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_MISD_CONV]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NUM_MISD_CONV" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_ARRESTS]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NUM_ARRESTS" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_JIMS_CHECK_BY]"
+                      codePage="1252"
+                      dataType="text"
+                      name="FIRST_JIMS_CHECK_BY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TCIC_HISTORY]"
+                      codePage="1252"
+                      dataType="text"
+                      name="TCIC_HISTORY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TCIC_WARRANT]"
+                      codePage="1252"
+                      dataType="text"
+                      name="TCIC_WARRANT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_HISTORY]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NCIC_HISTORY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_WARRANT]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NCIC_WARRANT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_JIMS_CHECK_DATE]"
+                      dataType="dbTimeStamp"
+                      name="FIRST_JIMS_CHECK_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_TCIC_DATE]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NCIC_TCIC_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_JIMS_CHECK_LOCATION]"
+                      codePage="1252"
+                      dataType="text"
+                      name="FIRST_JIMS_CHECK_LOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_TCIC_LOCATION]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NCIC_TCIC_LOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_CLASS_C]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NUM_CLASS_C" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RUN_DATE]"
+                      dataType="dbTimeStamp"
+                      name="RUN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMMENTS]"
+                      codePage="1252"
+                      dataType="text"
+                      name="COMMENTS" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SECOND_JIMS_CHECK_BY]"
+                      codePage="1252"
+                      dataType="text"
+                      name="SECOND_JIMS_CHECK_BY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SECOND_JIMS_CHECK_DATE]"
+                      dataType="dbTimeStamp"
+                      name="SECOND_JIMS_CHECK_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SECOND_JIMS_CHECK_LOCATION]"
+                      codePage="1252"
+                      dataType="text"
+                      name="SECOND_JIMS_CHECK_LOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_IND]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PROBATION_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_IND]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PAROLE_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOLD_IND]"
+                      codePage="1252"
+                      dataType="text"
+                      name="HOLD_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FUGITIVE_IND]"
+                      codePage="1252"
+                      dataType="text"
+                      name="FUGITIVE_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FAIL_TO_APPEAR_IND]"
+                      codePage="1252"
+                      dataType="text"
+                      name="FAIL_TO_APPEAR_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BOND_IND]"
+                      codePage="1252"
+                      dataType="text"
+                      name="BOND_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HPD_NUMBER]"
+                      codePage="1252"
+                      dataType="text"
+                      name="HPD_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SO_NUMBER]"
+                      codePage="1252"
+                      dataType="text"
+                      name="SO_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CCH_CORRECT_NEEDED]"
+                      codePage="1252"
+                      dataType="text"
+                      name="CCH_CORRECT_NEEDED" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATED_BY]"
+                      codePage="1252"
+                      dataType="text"
+                      name="UPDATED_BY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REG_SEX_OFFENDER]"
+                      codePage="1252"
+                      dataType="text"
+                      name="REG_SEX_OFFENDER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UNDER_PROTECTIVE_ORDER]"
+                      codePage="1252"
+                      dataType="text"
+                      name="UNDER_PROTECTIVE_ORDER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UNKNOWN_OFF_LVL_CONV]"
+                      codePage="1252"
+                      dataType="text"
+                      name="UNKNOWN_OFF_LVL_CONV" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HANDGUN_LICENSE]"
+                      codePage="1252"
+                      dataType="text"
+                      name="HANDGUN_LICENSE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_COMMENT]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PROBATION_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_COMMENT]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PAROLE_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ONBOND_COMMENT]"
+                      codePage="1252"
+                      dataType="text"
+                      name="ONBOND_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOLDS_COMMENT]"
+                      codePage="1252"
+                      dataType="text"
+                      name="HOLDS_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FUGITIVE_WAR_COMMENT]"
+                      codePage="1252"
+                      dataType="text"
+                      name="FUGITIVE_WAR_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PREV_FTA_COMMENT]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PREV_FTA_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_VIOLENT_CONV]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NUM_VIOLENT_CONV" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_JUVENILE_DISP]"
+                      codePage="1252"
+                      dataType="text"
+                      name="NUM_JUVENILE_DISP" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FBI_NUM]"
+                      codePage="1252"
+                      dataType="text"
+                      name="FBI_NUM" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SID]"
+                      codePage="1252"
+                      dataType="text"
+                      name="SID" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESS_CHECKED]"
+                      codePage="1252"
+                      dataType="text"
+                      name="ADDRESS_CHECKED" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
+                      dataType="dbTimeStamp"
+                      name="CREATEDATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEUSER]"
+                      codePage="1252"
+                      dataType="text"
+                      name="CREATEUSER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEDATE]"
+                      dataType="dbTimeStamp"
+                      name="UPDATEDATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEUSER]"
+                      codePage="1252"
+                      dataType="text"
+                      name="UPDATEUSER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWSTATUS]"
+                      codePage="1252"
+                      dataType="text"
+                      name="ROWSTATUS" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[vBudgManagement_ComputerRecord]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SVPEASDBW.PRPIN]"
+                  connectionManagerRefId="Package.ConnectionManagers[SVPEASDBW.PRPIN]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[INTERVIEW_ID]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_ID]"
+                      name="INTERVIEW_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NIT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NIT]"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NIT]"
+                      name="NIT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RUN_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RUN_BY]"
+                      length="8"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RUN_BY]"
+                      name="RUN_BY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_FEL_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_FEL_CONV]"
+                      length="2"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_FEL_CONV]"
+                      name="NUM_FEL_CONV"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_MISD_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_MISD_CONV]"
+                      length="2"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_MISD_CONV]"
+                      name="NUM_MISD_CONV"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_ARRESTS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_ARRESTS]"
+                      length="2"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_ARRESTS]"
+                      name="NUM_ARRESTS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIRST_JIMS_CHECK_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FIRST_JIMS_CHECK_BY]"
+                      length="9"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIRST_JIMS_CHECK_BY]"
+                      name="FIRST_JIMS_CHECK_BY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TCIC_HISTORY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TCIC_HISTORY]"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TCIC_HISTORY]"
+                      name="TCIC_HISTORY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TCIC_WARRANT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TCIC_WARRANT]"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TCIC_WARRANT]"
+                      name="TCIC_WARRANT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_HISTORY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NCIC_HISTORY]"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_HISTORY]"
+                      name="NCIC_HISTORY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_WARRANT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NCIC_WARRANT]"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_WARRANT]"
+                      name="NCIC_WARRANT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIRST_JIMS_CHECK_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FIRST_JIMS_CHECK_DATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIRST_JIMS_CHECK_DATE]"
+                      name="FIRST_JIMS_CHECK_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_TCIC_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NCIC_TCIC_DATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_TCIC_DATE]"
+                      name="NCIC_TCIC_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIRST_JIMS_CHECK_LOCATION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FIRST_JIMS_CHECK_LOCATION]"
+                      length="50"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIRST_JIMS_CHECK_LOCATION]"
+                      name="FIRST_JIMS_CHECK_LOCATION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_TCIC_LOCATION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NCIC_TCIC_LOCATION]"
+                      length="50"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NCIC_TCIC_LOCATION]"
+                      name="NCIC_TCIC_LOCATION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_CLASS_C]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_CLASS_C]"
+                      length="2"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_CLASS_C]"
+                      name="NUM_CLASS_C"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RUN_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RUN_DATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RUN_DATE]"
+                      name="RUN_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[COMMENTS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[COMMENTS]"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[COMMENTS]"
+                      name="COMMENTS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SECOND_JIMS_CHECK_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SECOND_JIMS_CHECK_BY]"
+                      length="9"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SECOND_JIMS_CHECK_BY]"
+                      name="SECOND_JIMS_CHECK_BY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SECOND_JIMS_CHECK_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SECOND_JIMS_CHECK_DATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SECOND_JIMS_CHECK_DATE]"
+                      name="SECOND_JIMS_CHECK_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SECOND_JIMS_CHECK_LOCATION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SECOND_JIMS_CHECK_LOCATION]"
+                      length="50"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SECOND_JIMS_CHECK_LOCATION]"
+                      name="SECOND_JIMS_CHECK_LOCATION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_IND]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PROBATION_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_IND]"
+                      name="PROBATION_IND"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PAROLE_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_IND]"
+                      name="PAROLE_IND"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HOLD_IND]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HOLD_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HOLD_IND]"
+                      name="HOLD_IND"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FUGITIVE_IND]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FUGITIVE_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FUGITIVE_IND]"
+                      name="FUGITIVE_IND"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FAIL_TO_APPEAR_IND]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FAIL_TO_APPEAR_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FAIL_TO_APPEAR_IND]"
+                      name="FAIL_TO_APPEAR_IND"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BOND_IND]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BOND_IND]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BOND_IND]"
+                      name="BOND_IND"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HPD_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HPD_NUMBER]"
+                      length="15"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HPD_NUMBER]"
+                      name="HPD_NUMBER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SO_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SO_NUMBER]"
+                      length="15"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SO_NUMBER]"
+                      name="SO_NUMBER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CCH_CORRECT_NEEDED]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CCH_CORRECT_NEEDED]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CCH_CORRECT_NEEDED]"
+                      name="CCH_CORRECT_NEEDED"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATED_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UPDATED_BY]"
+                      length="80"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATED_BY]"
+                      name="UPDATED_BY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[REG_SEX_OFFENDER]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REG_SEX_OFFENDER]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[REG_SEX_OFFENDER]"
+                      name="REG_SEX_OFFENDER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UNDER_PROTECTIVE_ORDER]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UNDER_PROTECTIVE_ORDER]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UNDER_PROTECTIVE_ORDER]"
+                      name="UNDER_PROTECTIVE_ORDER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UNKNOWN_OFF_LVL_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UNKNOWN_OFF_LVL_CONV]"
+                      length="3"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UNKNOWN_OFF_LVL_CONV]"
+                      name="UNKNOWN_OFF_LVL_CONV"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HANDGUN_LICENSE]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HANDGUN_LICENSE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HANDGUN_LICENSE]"
+                      name="HANDGUN_LICENSE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PROBATION_COMMENT]"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PROBATION_COMMENT]"
+                      name="PROBATION_COMMENT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PAROLE_COMMENT]"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PAROLE_COMMENT]"
+                      name="PAROLE_COMMENT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ONBOND_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ONBOND_COMMENT]"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ONBOND_COMMENT]"
+                      name="ONBOND_COMMENT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HOLDS_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HOLDS_COMMENT]"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HOLDS_COMMENT]"
+                      name="HOLDS_COMMENT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FUGITIVE_WAR_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FUGITIVE_WAR_COMMENT]"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FUGITIVE_WAR_COMMENT]"
+                      name="FUGITIVE_WAR_COMMENT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PREV_FTA_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PREV_FTA_COMMENT]"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PREV_FTA_COMMENT]"
+                      name="PREV_FTA_COMMENT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_VIOLENT_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_VIOLENT_CONV]"
+                      length="3"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_VIOLENT_CONV]"
+                      name="NUM_VIOLENT_CONV"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_JUVENILE_DISP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_JUVENILE_DISP]"
+                      length="3"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NUM_JUVENILE_DISP]"
+                      name="NUM_JUVENILE_DISP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FBI_NUM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FBI_NUM]"
+                      length="10"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FBI_NUM]"
+                      name="FBI_NUM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SID]"
+                      length="50"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SID]"
+                      name="SID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESS_CHECKED]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ADDRESS_CHECKED]"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESS_CHECKED]"
+                      name="ADDRESS_CHECKED"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATEDATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CREATEDATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATEDATE]"
+                      name="CREATEDATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATEUSER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CREATEUSER]"
+                      length="100"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATEUSER]"
+                      name="CREATEUSER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATEDATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UPDATEDATE]"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATEDATE]"
+                      name="UPDATEDATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATEUSER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UPDATEUSER]"
+                      length="100"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UPDATEUSER]"
+                      name="UPDATEUSER"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ROWSTATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ROWSTATUS]"
+                      length="2"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ROWSTATUS]"
+                      name="ROWSTATUS"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[INTERVIEW_ID]"
+                      dataType="i4"
+                      name="INTERVIEW_ID" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NIT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="NIT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RUN_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="RUN_BY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_FEL_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="NUM_FEL_CONV" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_MISD_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="NUM_MISD_CONV" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_ARRESTS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="NUM_ARRESTS" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FIRST_JIMS_CHECK_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="FIRST_JIMS_CHECK_BY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TCIC_HISTORY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="TCIC_HISTORY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TCIC_WARRANT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="TCIC_WARRANT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NCIC_HISTORY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="NCIC_HISTORY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NCIC_WARRANT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="NCIC_WARRANT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FIRST_JIMS_CHECK_DATE]"
+                      dataType="dbTimeStamp"
+                      name="FIRST_JIMS_CHECK_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NCIC_TCIC_DATE]"
+                      dataType="dbTimeStamp"
+                      name="NCIC_TCIC_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FIRST_JIMS_CHECK_LOCATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FIRST_JIMS_CHECK_LOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NCIC_TCIC_LOCATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NCIC_TCIC_LOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_CLASS_C]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="NUM_CLASS_C" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RUN_DATE]"
+                      dataType="dbTimeStamp"
+                      name="RUN_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[COMMENTS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="COMMENTS" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SECOND_JIMS_CHECK_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="SECOND_JIMS_CHECK_BY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SECOND_JIMS_CHECK_DATE]"
+                      dataType="dbTimeStamp"
+                      name="SECOND_JIMS_CHECK_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SECOND_JIMS_CHECK_LOCATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SECOND_JIMS_CHECK_LOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PROBATION_IND]"
+                      dataType="bool"
+                      name="PROBATION_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PAROLE_IND]"
+                      dataType="bool"
+                      name="PAROLE_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HOLD_IND]"
+                      dataType="bool"
+                      name="HOLD_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FUGITIVE_IND]"
+                      dataType="bool"
+                      name="FUGITIVE_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FAIL_TO_APPEAR_IND]"
+                      dataType="bool"
+                      name="FAIL_TO_APPEAR_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BOND_IND]"
+                      dataType="bool"
+                      name="BOND_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HPD_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="HPD_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SO_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="SO_NUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CCH_CORRECT_NEEDED]"
+                      dataType="bool"
+                      name="CCH_CORRECT_NEEDED" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UPDATED_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="80"
+                      name="UPDATED_BY" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REG_SEX_OFFENDER]"
+                      dataType="bool"
+                      name="REG_SEX_OFFENDER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UNDER_PROTECTIVE_ORDER]"
+                      dataType="bool"
+                      name="UNDER_PROTECTIVE_ORDER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UNKNOWN_OFF_LVL_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="UNKNOWN_OFF_LVL_CONV" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HANDGUN_LICENSE]"
+                      dataType="bool"
+                      name="HANDGUN_LICENSE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PROBATION_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PROBATION_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PAROLE_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PAROLE_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ONBOND_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="ONBOND_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HOLDS_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="HOLDS_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FUGITIVE_WAR_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="FUGITIVE_WAR_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PREV_FTA_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PREV_FTA_COMMENT" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_VIOLENT_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="NUM_VIOLENT_CONV" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NUM_JUVENILE_DISP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="NUM_JUVENILE_DISP" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FBI_NUM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="FBI_NUM" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SID" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ADDRESS_CHECKED]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="ADDRESS_CHECKED" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CREATEDATE]"
+                      dataType="dbTimeStamp"
+                      name="CREATEDATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CREATEUSER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="CREATEUSER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UPDATEDATE]"
+                      dataType="dbTimeStamp"
+                      name="UPDATEDATE" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UPDATEUSER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="UPDATEUSER" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ROWSTATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="ROWSTATUS" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID]"
+                      dataType="i4"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[INTERVIEW_ID]"
+                      dataType="i4"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[INTERVIEW_ID]"
+                      name="INTERVIEW_ID" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NIT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NIT]"
+                      name="NIT" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[RUN_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[RUN_BY]"
+                      name="RUN_BY" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_FEL_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_FEL_CONV]"
+                      name="NUM_FEL_CONV" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_MISD_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_MISD_CONV]"
+                      name="NUM_MISD_CONV" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_ARRESTS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_ARRESTS]"
+                      name="NUM_ARRESTS" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FIRST_JIMS_CHECK_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FIRST_JIMS_CHECK_BY]"
+                      name="FIRST_JIMS_CHECK_BY" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TCIC_HISTORY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TCIC_HISTORY]"
+                      name="TCIC_HISTORY" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TCIC_WARRANT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TCIC_WARRANT]"
+                      name="TCIC_WARRANT" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NCIC_HISTORY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NCIC_HISTORY]"
+                      name="NCIC_HISTORY" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NCIC_WARRANT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NCIC_WARRANT]"
+                      name="NCIC_WARRANT" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FIRST_JIMS_CHECK_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FIRST_JIMS_CHECK_DATE]"
+                      name="FIRST_JIMS_CHECK_DATE" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NCIC_TCIC_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NCIC_TCIC_DATE]"
+                      name="NCIC_TCIC_DATE" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FIRST_JIMS_CHECK_LOCATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FIRST_JIMS_CHECK_LOCATION]"
+                      name="FIRST_JIMS_CHECK_LOCATION" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NCIC_TCIC_LOCATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NCIC_TCIC_LOCATION]"
+                      name="NCIC_TCIC_LOCATION" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_CLASS_C]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_CLASS_C]"
+                      name="NUM_CLASS_C" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[RUN_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[RUN_DATE]"
+                      name="RUN_DATE" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[COMMENTS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[COMMENTS]"
+                      name="COMMENTS" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SECOND_JIMS_CHECK_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SECOND_JIMS_CHECK_BY]"
+                      name="SECOND_JIMS_CHECK_BY" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SECOND_JIMS_CHECK_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SECOND_JIMS_CHECK_DATE]"
+                      name="SECOND_JIMS_CHECK_DATE" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SECOND_JIMS_CHECK_LOCATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SECOND_JIMS_CHECK_LOCATION]"
+                      name="SECOND_JIMS_CHECK_LOCATION" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PROBATION_IND]"
+                      dataType="bool"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PROBATION_IND]"
+                      name="PROBATION_IND" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PAROLE_IND]"
+                      dataType="bool"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PAROLE_IND]"
+                      name="PAROLE_IND" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HOLD_IND]"
+                      dataType="bool"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HOLD_IND]"
+                      name="HOLD_IND" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FUGITIVE_IND]"
+                      dataType="bool"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FUGITIVE_IND]"
+                      name="FUGITIVE_IND" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FAIL_TO_APPEAR_IND]"
+                      dataType="bool"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FAIL_TO_APPEAR_IND]"
+                      name="FAIL_TO_APPEAR_IND" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BOND_IND]"
+                      dataType="bool"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BOND_IND]"
+                      name="BOND_IND" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HPD_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HPD_NUMBER]"
+                      name="HPD_NUMBER" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SO_NUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SO_NUMBER]"
+                      name="SO_NUMBER" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CCH_CORRECT_NEEDED]"
+                      dataType="bool"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CCH_CORRECT_NEEDED]"
+                      name="CCH_CORRECT_NEEDED" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UPDATED_BY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="80"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UPDATED_BY]"
+                      name="UPDATED_BY" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[REG_SEX_OFFENDER]"
+                      dataType="bool"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[REG_SEX_OFFENDER]"
+                      name="REG_SEX_OFFENDER" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UNDER_PROTECTIVE_ORDER]"
+                      dataType="bool"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UNDER_PROTECTIVE_ORDER]"
+                      name="UNDER_PROTECTIVE_ORDER" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UNKNOWN_OFF_LVL_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UNKNOWN_OFF_LVL_CONV]"
+                      name="UNKNOWN_OFF_LVL_CONV" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HANDGUN_LICENSE]"
+                      dataType="bool"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HANDGUN_LICENSE]"
+                      name="HANDGUN_LICENSE" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PROBATION_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PROBATION_COMMENT]"
+                      name="PROBATION_COMMENT" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PAROLE_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PAROLE_COMMENT]"
+                      name="PAROLE_COMMENT" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ONBOND_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ONBOND_COMMENT]"
+                      name="ONBOND_COMMENT" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HOLDS_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HOLDS_COMMENT]"
+                      name="HOLDS_COMMENT" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FUGITIVE_WAR_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FUGITIVE_WAR_COMMENT]"
+                      name="FUGITIVE_WAR_COMMENT" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PREV_FTA_COMMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PREV_FTA_COMMENT]"
+                      name="PREV_FTA_COMMENT" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_VIOLENT_CONV]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_VIOLENT_CONV]"
+                      name="NUM_VIOLENT_CONV" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_JUVENILE_DISP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NUM_JUVENILE_DISP]"
+                      name="NUM_JUVENILE_DISP" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FBI_NUM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FBI_NUM]"
+                      name="FBI_NUM" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SID]"
+                      name="SID" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESS_CHECKED]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESS_CHECKED]"
+                      name="ADDRESS_CHECKED" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CREATEDATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CREATEDATE]"
+                      name="CREATEDATE" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CREATEUSER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CREATEUSER]"
+                      name="CREATEUSER" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UPDATEDATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UPDATEDATE]"
+                      name="UPDATEDATE" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UPDATEUSER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UPDATEUSER]"
+                      name="UPDATEUSER" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ROWSTATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ROWSTATUS]"
+                      name="ROWSTATUS" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\vBM_ComputerRecord Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\vBM_ComputerRecord SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D0787E99-5FC5-4CEB-BBFD-652F6BEDF62A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="vBM_ComputerRecord SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_ComputerRecordSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_ComputerRecordSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_ComputerRecordSTG](&#xA;&#x9;ID VARCHAR(MAX) NULL,&#xA;&#x9;INTERVIEW_ID VARCHAR(MAX) NULL,&#xA;&#x9;NIT VARCHAR(MAX) NULL,&#xA;&#x9;RUN_BY VARCHAR(MAX) NULL,&#xA;&#x9;NUM_FEL_CONV VARCHAR(MAX) NULL,&#xA;&#x9;NUM_MISD_CONV VARCHAR(MAX) NULL,&#xA;&#x9;NUM_ARRESTS VARCHAR(MAX) NULL,&#xA;&#x9;FIRST_JIMS_CHECK_BY VARCHAR(MAX) NULL,&#xA;&#x9;TCIC_HISTORY VARCHAR(MAX) NULL,&#xA;&#x9;TCIC_WARRANT VARCHAR(MAX) NULL,&#xA;&#x9;NCIC_HISTORY VARCHAR(MAX) NULL,&#xA;&#x9;NCIC_WARRANT VARCHAR(MAX) NULL,&#xA;&#x9;FIRST_JIMS_CHECK_DATE DATETIME NULL,&#xA;&#x9;NCIC_TCIC_DATE VARCHAR(MAX) NULL,&#xA;&#x9;FIRST_JIMS_CHECK_LOCATION VARCHAR(MAX) NULL,&#xA;&#x9;NCIC_TCIC_LOCATION VARCHAR(MAX) NULL,&#xA;&#x9;NUM_CLASS_C VARCHAR(MAX) NULL,&#xA;&#x9;RUN_DATE DATETIME NULL,&#xA;&#x9;COMMENTS VARCHAR(MAX) NULL,&#xA;&#x9;SECOND_JIMS_CHECK_BY VARCHAR(MAX) NULL,&#xA;&#x9;SECOND_JIMS_CHECK_DATE DATETIME NULL,&#xA;&#x9;SECOND_JIMS_CHECK_LOCATION VARCHAR(MAX) NULL,&#xA;&#x9;PROBATION_IND VARCHAR(MAX) NULL,&#xA;&#x9;PAROLE_IND VARCHAR(MAX) NULL,&#xA;&#x9;HOLD_IND VARCHAR(MAX) NULL,&#xA;&#x9;FUGITIVE_IND VARCHAR(MAX) NULL,&#xA;&#x9;FAIL_TO_APPEAR_IND VARCHAR(MAX) NULL,&#xA;&#x9;BOND_IND VARCHAR(MAX) NULL,&#xA;&#x9;HPD_NUMBER VARCHAR(MAX) NULL,&#xA;&#x9;SO_NUMBER VARCHAR(MAX) NULL,&#xA;&#x9;CCH_CORRECT_NEEDED VARCHAR(MAX) NULL,&#xA;&#x9;UPDATED_BY VARCHAR(MAX) NULL,&#xA;&#x9;REG_SEX_OFFENDER VARCHAR(MAX) NULL,&#xA;&#x9;UNDER_PROTECTIVE_ORDER VARCHAR(MAX) NULL,&#xA;&#x9;UNKNOWN_OFF_LVL_CONV VARCHAR(MAX) NULL,&#xA;&#x9;HANDGUN_LICENSE VARCHAR(MAX) NULL,&#xA;&#x9;PROBATION_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;PAROLE_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;ONBOND_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;HOLDS_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;FUGITIVE_WAR_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;PREV_FTA_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;NUM_VIOLENT_CONV VARCHAR(MAX) NULL,&#xA;&#x9;NUM_JUVENILE_DISP VARCHAR(MAX) NULL,&#xA;&#x9;FBI_NUM VARCHAR(MAX) NULL,&#xA;&#x9;SID VARCHAR(MAX) NULL,&#xA;&#x9;ADDRESS_CHECKED VARCHAR(MAX) NULL,&#xA;&#x9;CREATEDATE DATETIME NULL,&#xA;&#x9;CREATEUSER VARCHAR(MAX) NULL,&#xA;&#x9;UPDATEDATE DATETIME NULL,&#xA;&#x9;UPDATEUSER VARCHAR(MAX) NULL,&#xA;&#x9;ROWSTATUS VARCHAR(MAX) NULL&#xA;&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CF28B456-4A96-4275-99E4-A7918D121BE8}"
+      DTS:From="Package\vBM_ComputerRecord SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\vBM_ComputerRecord Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="231,42"
+          Id="Package\vBM_ComputerRecord SQL Task"
+          TopLeft="163,131" />
+        <NodeLayout
+          Size="259,42"
+          Id="Package\vBM_ComputerRecord Data Flow Task"
+          TopLeft="610,138" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="394,155.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="216,0"
+              Start="0,0"
+              End="208.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="208.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\vBM_ComputerRecord Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source"
+          TopLeft="219,150" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination"
+          TopLeft="581,151" />
+        <EdgeLayout
+          Id="Package\vBM_ComputerRecord Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="369,171.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="212,0"
+              Start="0,0"
+              End="204.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="204.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
