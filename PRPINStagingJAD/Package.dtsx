@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{47F93713-E83A-4830-8993-E5150E526B4B}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{6E6B570A-791B-4239-8AAE-B72F45A4B0A1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2039,7 +2039,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_ComputerRecord SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -3575,7 +3575,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_DefendantAddressSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6085,7 +6085,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_DefendantSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -10926,7 +10926,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_FinancialItem SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -11261,7 +11261,8 @@
                       name="PRIMARY_INCOME_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEF_INCOME]"
-                      dataType="dbTimeStamp"
+                      codePage="1252"
+                      dataType="text"
                       name="DEF_INCOME" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SPOUSE_INCOME]"
@@ -11898,7 +11899,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_FinancialSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12034,6 +12035,212 @@
                       cachedName="ROWSTATUS"
                       externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWSTATUS]"
                       lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ROWSTATUS]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CJIS_NUM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CJIS_NUM"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CJIS_NUM]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CJIS_NUM]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DA_LOG_NUM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DA_LOG_NUM"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DA_LOG_NUM]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DA_LOG_NUM]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DEF_STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="DEF_STATUS"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEF_STATUS]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEF_STATUS]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DEF_STATUS_DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="DEF_STATUS_DESCRIPTION"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEF_STATUS_DESCRIPTION]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEF_STATUS_DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IDTYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="IDTYPE"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDTYPE]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[IDTYPE]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_DT]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INTERVIEW_DT"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_DT]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_DT]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_LOCATION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="INTERVIEW_LOCATION"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_LOCATION]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_LOCATION]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_LOCATION_DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="INTERVIEW_LOCATION_DESCRIPTION"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_LOCATION_DESCRIPTION]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_LOCATION_DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_LOCKED]"
+                      cachedDataType="bool"
+                      cachedName="INTERVIEW_LOCKED"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_LOCKED]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_LOCKED]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_REASON]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="INTERVIEW_REASON"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_REASON]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_REASON]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_REASON_DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="INTERVIEW_REASON_DESCRIPTION"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_REASON_DESCRIPTION]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_REASON_DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_SHIFT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="INTERVIEW_SHIFT"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_SHIFT]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_SHIFT]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="INTERVIEW_TYPE"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_TYPE]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_TYPE]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_Type_DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="INTERVIEW_Type_DESCRIPTION"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_Type_DESCRIPTION]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_Type_DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEWER_SPN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="INTERVIEWER_SPN"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEWER_SPN]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEWER_SPN]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_SUMMARY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="INTERVIEW_SUMMARY"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_SUMMARY]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_SUMMARY]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="INTERVIEW_STATUS"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_STATUS]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_STATUS]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INTERVIEW_STATUS_DESCRIPTION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="INTERVIEW_STATUS_DESCRIPTION"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_STATUS_DESCRIPTION]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[INTERVIEW_STATUS_DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NAME_SEQ_NUM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="NAME_SEQ_NUM"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NAME_SEQ_NUM]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NAME_SEQ_NUM]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SPN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="SPN"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SPN]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SPN]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CONTACTED_SINCE_ARREST]"
+                      cachedDataType="bool"
+                      cachedName="CONTACTED_SINCE_ARREST"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTED_SINCE_ARREST]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTED_SINCE_ARREST]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LASTNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="75"
+                      cachedName="LASTNAME"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LASTNAME]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[LASTNAME]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FIRSTNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FIRSTNAME"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRSTNAME]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIRSTNAME]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MIDDLENAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MIDDLENAME"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MIDDLENAME]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MIDDLENAME]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MANUAL_INTERVIEW]"
+                      cachedDataType="bool"
+                      cachedName="MANUAL_INTERVIEW"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MANUAL_INTERVIEW]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MANUAL_INTERVIEW]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MANUALLY_ENTERED_BY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="80"
+                      cachedName="MANUALLY_ENTERED_BY"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MANUALLY_ENTERED_BY]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MANUALLY_ENTERED_BY]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[REFUSAL_IND]"
+                      cachedDataType="bool"
+                      cachedName="REFUSAL_IND"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REFUSAL_IND]"
+                      lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[REFUSAL_IND]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -12106,7 +12313,8 @@
                       name="INTERVIEW_LOCATION_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_LOCKED]"
-                      dataType="dbTimeStamp"
+                      codePage="1252"
+                      dataType="text"
                       name="INTERVIEW_LOCKED" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_REASON]"
@@ -13078,12 +13286,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_Interview SQL Task 3"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_InterviewSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_InterviewSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_InterviewSTG](&#xA; ID&#x9; VARCHAR(MAX) NULL,&#xA;CJIS_NUM&#x9; VARCHAR(MAX) NULL,&#xA;DA_LOG_NUM&#x9; VARCHAR(MAX) NULL,&#xA;DEF_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;DEF_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;IDTYPE&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_DT&#x9;DATETIME NULL,&#xA;INTERVIEW_LOCATION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_LOCATION_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_LOCKED&#x9;DATETIME NULL,&#xA;INTERVIEW_REASON&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_REASON_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_SHIFT&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_TYPE&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_Type_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEWER_SPN&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_SUMMARY&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;NAME_SEQ_NUM&#x9; VARCHAR(MAX) NULL,&#xA;SPN&#x9; VARCHAR(MAX) NULL,&#xA;CONTACTED_SINCE_ARREST&#x9; VARCHAR(MAX) NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;LASTNAME&#x9; VARCHAR(MAX) NULL,&#xA;FIRSTNAME&#x9; VARCHAR(MAX) NULL,&#xA;MIDDLENAME&#x9; VARCHAR(MAX) NULL,&#xA;MANUAL_INTERVIEW&#x9; VARCHAR(MAX) NULL,&#xA;MANUALLY_ENTERED_BY&#x9; VARCHAR(MAX) NULL,&#xA;REFUSAL_IND&#x9; VARCHAR(MAX) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_InterviewSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_InterviewSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_InterviewSTG](&#xA; ID&#x9; VARCHAR(MAX) NULL,&#xA;CJIS_NUM&#x9; VARCHAR(MAX) NULL,&#xA;DA_LOG_NUM&#x9; VARCHAR(MAX) NULL,&#xA;DEF_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;DEF_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;IDTYPE&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_DT&#x9;DATETIME NULL,&#xA;INTERVIEW_LOCATION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_LOCATION_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_LOCKED&#x9;VARCHAR(MAX) NULL,&#xA;INTERVIEW_REASON&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_REASON_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_SHIFT&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_TYPE&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_Type_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEWER_SPN&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_SUMMARY&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;NAME_SEQ_NUM&#x9; VARCHAR(MAX) NULL,&#xA;SPN&#x9; VARCHAR(MAX) NULL,&#xA;CONTACTED_SINCE_ARREST&#x9; VARCHAR(MAX) NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;LASTNAME&#x9; VARCHAR(MAX) NULL,&#xA;FIRSTNAME&#x9; VARCHAR(MAX) NULL,&#xA;MIDDLENAME&#x9; VARCHAR(MAX) NULL,&#xA;MANUAL_INTERVIEW&#x9; VARCHAR(MAX) NULL,&#xA;MANUALLY_ENTERED_BY&#x9; VARCHAR(MAX) NULL,&#xA;REFUSAL_IND&#x9; VARCHAR(MAX) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -14076,7 +14284,8 @@
                       name="INTERVIEW_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_IND]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="text"
                       name="PROBATION_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_IND]"
@@ -14821,7 +15030,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_ReportedRecord SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="8">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -15691,7 +15900,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_Residence SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="8">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -15787,13 +15996,77 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="259,42"
+          Id="Package\vBM_ComputerRecord Data Flow Task"
+          TopLeft="363,43" />
+        <NodeLayout
           Size="231,42"
           Id="Package\vBM_ComputerRecord SQL Task"
           TopLeft="25,38" />
         <NodeLayout
-          Size="259,42"
-          Id="Package\vBM_ComputerRecord Data Flow Task"
-          TopLeft="363,43" />
+          Size="286,42"
+          Id="Package\vBM_DefendantAddressSTG Data Flow Task"
+          TopLeft="363,166" />
+        <NodeLayout
+          Size="257,42"
+          Id="Package\vBM_DefendantAddressSTG SQL Task"
+          TopLeft="25,161" />
+        <NodeLayout
+          Size="248,42"
+          Id="Package\vBM_DefendantSTG Data Flow Task"
+          TopLeft="366,104" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\vBM_DefendantSTG SQL Task"
+          TopLeft="27,99" />
+        <NodeLayout
+          Size="226,42"
+          Id="Package\vBM_Education Data Flow Task"
+          TopLeft="362,237" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\vBM_Education SQL Task"
+          TopLeft="24,232" />
+        <NodeLayout
+          Size="243,42"
+          Id="Package\vBM_FinancialItem Data Flow Task"
+          TopLeft="362,360" />
+        <NodeLayout
+          Size="231,42"
+          Id="Package\vBM_FinancialItem SQL Task"
+          TopLeft="24,355" />
+        <NodeLayout
+          Size="240,42"
+          Id="Package\vBM_FinancialSTG Data Flow Task"
+          TopLeft="360.25,294.25" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\vBM_FinancialSTG SQL Task"
+          TopLeft="22.25,289.25" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\vBM_Interview Data Flow Task"
+          TopLeft="354,433" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\vBM_Interview SQL Task 3"
+          TopLeft="25,429" />
+        <NodeLayout
+          Size="256,42"
+          Id="Package\vBM_ReportedRecord Data Flow Task"
+          TopLeft="365,495" />
+        <NodeLayout
+          Size="231,42"
+          Id="Package\vBM_ReportedRecord SQL Task"
+          TopLeft="27,490" />
+        <NodeLayout
+          Size="228,42"
+          Id="Package\vBM_Residence Data Flow Task"
+          TopLeft="363,557" />
+        <NodeLayout
+          Size="231,42"
+          Id="Package\vBM_Residence SQL Task"
+          TopLeft="25,552" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="256,61.5">
@@ -15816,28 +16089,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="220,42"
-          Id="Package\vBM_DefendantSTG SQL Task"
-          TopLeft="27,99" />
-        <NodeLayout
-          Size="248,42"
-          Id="Package\vBM_DefendantSTG Data Flow Task"
-          TopLeft="365,104" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="247,122.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="118,0"
+              EndConnector="119,0"
               Start="0,0"
-              End="110.5,0">
+              End="111.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="110.5,0" />
+                    End="111.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15846,14 +16111,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="257,42"
-          Id="Package\vBM_DefendantAddressSTG SQL Task"
-          TopLeft="25,161" />
-        <NodeLayout
-          Size="286,42"
-          Id="Package\vBM_DefendantAddressSTG Data Flow Task"
-          TopLeft="363,166" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1 1]"
           TopLeft="282,184.5">
@@ -15876,145 +16133,9 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="198,42"
-          Id="Package\vBM_Education SQL Task"
-          TopLeft="24,232" />
-        <NodeLayout
-          Size="226,42"
-          Id="Package\vBM_Education Data Flow Task"
-          TopLeft="362,237" />
-        <NodeLayout
-          Size="212,42"
-          Id="Package\vBM_FinancialSTG SQL Task"
-          TopLeft="22.25,289.25" />
-        <NodeLayout
-          Size="240,42"
-          Id="Package\vBM_FinancialSTG Data Flow Task"
-          TopLeft="360.25,294.25" />
-        <NodeLayout
-          Size="231,42"
-          Id="Package\vBM_FinancialItem SQL Task"
-          TopLeft="24,355" />
-        <NodeLayout
-          Size="243,42"
-          Id="Package\vBM_FinancialItem Data Flow Task"
-          TopLeft="362,360" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="222,255.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="140,0"
-              Start="0,0"
-              End="132.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="132.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1 2]"
-          TopLeft="234.25,312.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="126,0"
-              Start="0,0"
-              End="118.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="118.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1 1 1]"
           TopLeft="255,378.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="107,0"
-              Start="0,0"
-              End="99.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="99.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="205,42"
-          Id="Package\vBM_Interview SQL Task 3"
-          TopLeft="25,429" />
-        <NodeLayout
-          Size="224,42"
-          Id="Package\vBM_Interview Data Flow Task"
-          TopLeft="363,434" />
-        <NodeLayout
-          Size="231,42"
-          Id="Package\vBM_ReportedRecord SQL Task"
-          TopLeft="27,490" />
-        <NodeLayout
-          Size="256,42"
-          Id="Package\vBM_ReportedRecord Data Flow Task"
-          TopLeft="365,495" />
-        <NodeLayout
-          Size="231,42"
-          Id="Package\vBM_Residence SQL Task"
-          TopLeft="25,552" />
-        <NodeLayout
-          Size="228,42"
-          Id="Package\vBM_Residence Data Flow Task"
-          TopLeft="363,557" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="230,452.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="133,0"
-              Start="0,0"
-              End="125.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="125.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1 3]"
-          TopLeft="258,513.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16048,6 +16169,94 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="99.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1 2]"
+          TopLeft="234.25,312.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126,0"
+              Start="0,0"
+              End="118.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="118.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1 3]"
+          TopLeft="258,513.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="107,0"
+              Start="0,0"
+              End="99.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="99.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="222,255.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140,0"
+              Start="0,0"
+              End="132.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="132.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="230,452">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124,0"
+              Start="0,0"
+              End="116.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="116.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16098,6 +16307,19 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\vBM_ComputerRecord Data Flow Task\OLE DB Source">
     <Properties>
       <Property>
@@ -16110,8 +16332,46 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\vBM_DefendantAddressSTG Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Source"
+          TopLeft="219,150" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination"
+          TopLeft="581,151" />
+        <EdgeLayout
+          Id="Package\vBM_DefendantAddressSTG Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="369,171.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="212,0"
+              Start="0,0"
+              End="204.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="204.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination">
+    design-time-name="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -16120,6 +16380,19 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -16188,82 +16461,18 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\vBM_DefendantAddressSTG Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination"
-          TopLeft="581,151" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Source"
-          TopLeft="219,150" />
-        <EdgeLayout
-          Id="Package\vBM_DefendantAddressSTG Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="369,171.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="212,0"
-              Start="0,0"
-              End="204.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="204.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\vBM_Education Data Flow Task">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171,42"
-          Id="Package\vBM_Education Data Flow Task\OLE DB Destination"
-          TopLeft="581,151" />
-        <NodeLayout
           Size="150,42"
           Id="Package\vBM_Education Data Flow Task\OLE DB Source"
           TopLeft="219,150" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\vBM_Education Data Flow Task\OLE DB Destination"
+          TopLeft="581,151" />
         <EdgeLayout
           Id="Package\vBM_Education Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="369,171.5">
@@ -16304,70 +16513,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\vBM_Education Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\vBM_FinancialSTG Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination"
-          TopLeft="581,151" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\vBM_FinancialSTG Data Flow Task\OLE DB Source"
-          TopLeft="219,150" />
-        <EdgeLayout
-          Id="Package\vBM_FinancialSTG Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="369,171.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="212,0"
-              Start="0,0"
-              End="204.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="204.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\vBM_FinancialSTG Data Flow Task\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -16444,18 +16589,82 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\vBM_Interview Data Flow Task">
+    design-time-name="Package\vBM_FinancialSTG Data Flow Task">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
-          Id="Package\vBM_Interview Data Flow Task\OLE DB Destination"
+          Id="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination"
           TopLeft="581,151" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\vBM_FinancialSTG Data Flow Task\OLE DB Source"
+          TopLeft="219,150" />
+        <EdgeLayout
+          Id="Package\vBM_FinancialSTG Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="369,171.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="212,0"
+              Start="0,0"
+              End="204.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="204.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\vBM_FinancialSTG Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\vBM_Interview Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\vBM_Interview Data Flow Task\OLE DB Source"
           TopLeft="219,150" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\vBM_Interview Data Flow Task\OLE DB Destination"
+          TopLeft="581,151" />
         <EdgeLayout
           Id="Package\vBM_Interview Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="369,171.5">
