@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{6E6B570A-791B-4239-8AAE-B72F45A4B0A1}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{C760D10F-91F5-41E3-AFFA-249737AC62AC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -69,7 +69,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[PRPIN].[vBM_ComputerRecordSTG]</property>
+                  name="OpenRowset">[pts].[ComputerRecordSTG]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -510,63 +510,71 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="INTERVIEW_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NIT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="1"
                       name="NIT" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RUN_BY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="8"
                       name="RUN_BY" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_FEL_CONV]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="NUM_FEL_CONV" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_MISD_CONV]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="NUM_MISD_CONV" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_ARRESTS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="NUM_ARRESTS" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_JIMS_CHECK_BY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="9"
                       name="FIRST_JIMS_CHECK_BY" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TCIC_HISTORY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="1"
                       name="TCIC_HISTORY" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TCIC_WARRANT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="1"
                       name="TCIC_WARRANT" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_HISTORY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="1"
                       name="NCIC_HISTORY" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_WARRANT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="1"
                       name="NCIC_WARRANT" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_JIMS_CHECK_DATE]"
@@ -574,23 +582,25 @@
                       name="FIRST_JIMS_CHECK_DATE" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_TCIC_DATE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="dbTimeStamp"
                       name="NCIC_TCIC_DATE" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_JIMS_CHECK_LOCATION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="FIRST_JIMS_CHECK_LOCATION" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NCIC_TCIC_LOCATION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="NCIC_TCIC_LOCATION" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_CLASS_C]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="NUM_CLASS_C" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RUN_DATE]"
@@ -599,12 +609,14 @@
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMMENTS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="COMMENTS" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SECOND_JIMS_CHECK_BY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="9"
                       name="SECOND_JIMS_CHECK_BY" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SECOND_JIMS_CHECK_DATE]"
@@ -613,132 +625,138 @@
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SECOND_JIMS_CHECK_LOCATION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="SECOND_JIMS_CHECK_LOCATION" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="PROBATION_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="PAROLE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOLD_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="HOLD_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FUGITIVE_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="FUGITIVE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FAIL_TO_APPEAR_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="FAIL_TO_APPEAR_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BOND_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="BOND_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HPD_NUMBER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="15"
                       name="HPD_NUMBER" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SO_NUMBER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="15"
                       name="SO_NUMBER" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CCH_CORRECT_NEEDED]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="CCH_CORRECT_NEEDED" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATED_BY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="80"
                       name="UPDATED_BY" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REG_SEX_OFFENDER]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="REG_SEX_OFFENDER" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UNDER_PROTECTIVE_ORDER]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="UNDER_PROTECTIVE_ORDER" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UNKNOWN_OFF_LVL_CONV]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="3"
                       name="UNKNOWN_OFF_LVL_CONV" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HANDGUN_LICENSE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="HANDGUN_LICENSE" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_COMMENT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="PROBATION_COMMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_COMMENT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="PAROLE_COMMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ONBOND_COMMENT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="ONBOND_COMMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOLDS_COMMENT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="HOLDS_COMMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FUGITIVE_WAR_COMMENT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="FUGITIVE_WAR_COMMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PREV_FTA_COMMENT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="PREV_FTA_COMMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_VIOLENT_CONV]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="3"
                       name="NUM_VIOLENT_CONV" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NUM_JUVENILE_DISP]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="3"
                       name="NUM_JUVENILE_DISP" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FBI_NUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="10"
                       name="FBI_NUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SID]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="SID" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESS_CHECKED]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="1"
                       name="ADDRESS_CHECKED" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
@@ -747,7 +765,8 @@
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="CREATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEDATE]"
@@ -756,12 +775,14 @@
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="UPDATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_ComputerRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWSTATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="ROWSTATUS" />
                   </externalMetadataColumns>
                 </input>
@@ -2039,12 +2060,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_ComputerRecord SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_ComputerRecordSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_ComputerRecordSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_ComputerRecordSTG](&#xA;&#x9;ID VARCHAR(MAX) NULL,&#xA;&#x9;INTERVIEW_ID VARCHAR(MAX) NULL,&#xA;&#x9;NIT VARCHAR(MAX) NULL,&#xA;&#x9;RUN_BY VARCHAR(MAX) NULL,&#xA;&#x9;NUM_FEL_CONV VARCHAR(MAX) NULL,&#xA;&#x9;NUM_MISD_CONV VARCHAR(MAX) NULL,&#xA;&#x9;NUM_ARRESTS VARCHAR(MAX) NULL,&#xA;&#x9;FIRST_JIMS_CHECK_BY VARCHAR(MAX) NULL,&#xA;&#x9;TCIC_HISTORY VARCHAR(MAX) NULL,&#xA;&#x9;TCIC_WARRANT VARCHAR(MAX) NULL,&#xA;&#x9;NCIC_HISTORY VARCHAR(MAX) NULL,&#xA;&#x9;NCIC_WARRANT VARCHAR(MAX) NULL,&#xA;&#x9;FIRST_JIMS_CHECK_DATE DATETIME NULL,&#xA;&#x9;NCIC_TCIC_DATE VARCHAR(MAX) NULL,&#xA;&#x9;FIRST_JIMS_CHECK_LOCATION VARCHAR(MAX) NULL,&#xA;&#x9;NCIC_TCIC_LOCATION VARCHAR(MAX) NULL,&#xA;&#x9;NUM_CLASS_C VARCHAR(MAX) NULL,&#xA;&#x9;RUN_DATE DATETIME NULL,&#xA;&#x9;COMMENTS VARCHAR(MAX) NULL,&#xA;&#x9;SECOND_JIMS_CHECK_BY VARCHAR(MAX) NULL,&#xA;&#x9;SECOND_JIMS_CHECK_DATE DATETIME NULL,&#xA;&#x9;SECOND_JIMS_CHECK_LOCATION VARCHAR(MAX) NULL,&#xA;&#x9;PROBATION_IND VARCHAR(MAX) NULL,&#xA;&#x9;PAROLE_IND VARCHAR(MAX) NULL,&#xA;&#x9;HOLD_IND VARCHAR(MAX) NULL,&#xA;&#x9;FUGITIVE_IND VARCHAR(MAX) NULL,&#xA;&#x9;FAIL_TO_APPEAR_IND VARCHAR(MAX) NULL,&#xA;&#x9;BOND_IND VARCHAR(MAX) NULL,&#xA;&#x9;HPD_NUMBER VARCHAR(MAX) NULL,&#xA;&#x9;SO_NUMBER VARCHAR(MAX) NULL,&#xA;&#x9;CCH_CORRECT_NEEDED VARCHAR(MAX) NULL,&#xA;&#x9;UPDATED_BY VARCHAR(MAX) NULL,&#xA;&#x9;REG_SEX_OFFENDER VARCHAR(MAX) NULL,&#xA;&#x9;UNDER_PROTECTIVE_ORDER VARCHAR(MAX) NULL,&#xA;&#x9;UNKNOWN_OFF_LVL_CONV VARCHAR(MAX) NULL,&#xA;&#x9;HANDGUN_LICENSE VARCHAR(MAX) NULL,&#xA;&#x9;PROBATION_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;PAROLE_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;ONBOND_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;HOLDS_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;FUGITIVE_WAR_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;PREV_FTA_COMMENT VARCHAR(MAX) NULL,&#xA;&#x9;NUM_VIOLENT_CONV VARCHAR(MAX) NULL,&#xA;&#x9;NUM_JUVENILE_DISP VARCHAR(MAX) NULL,&#xA;&#x9;FBI_NUM VARCHAR(MAX) NULL,&#xA;&#x9;SID VARCHAR(MAX) NULL,&#xA;&#x9;ADDRESS_CHECKED VARCHAR(MAX) NULL,&#xA;&#x9;CREATEDATE DATETIME NULL,&#xA;&#x9;CREATEUSER VARCHAR(MAX) NULL,&#xA;&#x9;UPDATEDATE DATETIME NULL,&#xA;&#x9;UPDATEUSER VARCHAR(MAX) NULL,&#xA;&#x9;ROWSTATUS VARCHAR(MAX) NULL&#xA;&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'pts'&#xA;    AND TABLE_NAME = 'ComputerRecordSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [pts].[ComputerRecordSTG]&#xA;GO&#xA;CREATE TABLE [pts].[ComputerRecordSTG](&#xA;&#x9;[ID] [int] NULL,&#xA;&#x9;[INTERVIEW_ID] [int] NULL,&#xA;&#x9;[NIT] [varchar](1) NULL,&#xA;&#x9;[RUN_BY] [varchar](8) NULL,&#xA;&#x9;[NUM_FEL_CONV] [varchar](2) NULL,&#xA;&#x9;[NUM_MISD_CONV] [varchar](2) NULL,&#xA;&#x9;[NUM_ARRESTS] [varchar](2) NULL,&#xA;&#x9;[FIRST_JIMS_CHECK_BY] [varchar](9) NULL,&#xA;&#x9;[TCIC_HISTORY] [varchar](1) NULL,&#xA;&#x9;[TCIC_WARRANT] [varchar](1) NULL,&#xA;&#x9;[NCIC_HISTORY] [varchar](1) NULL,&#xA;&#x9;[NCIC_WARRANT] [varchar](1) NULL,&#xA;&#x9;[FIRST_JIMS_CHECK_DATE] [datetime] NULL,&#xA;&#x9;[NCIC_TCIC_DATE] [datetime] NULL,&#xA;&#x9;[FIRST_JIMS_CHECK_LOCATION] [varchar](50) NULL,&#xA;&#x9;[NCIC_TCIC_LOCATION] [varchar](50) NULL,&#xA;&#x9;[NUM_CLASS_C] [varchar](2) NULL,&#xA;&#x9;[RUN_DATE] [datetime] NULL,&#xA;&#x9;[COMMENTS] [varchar](255) NULL,&#xA;&#x9;[SECOND_JIMS_CHECK_BY] [varchar](9) NULL,&#xA;&#x9;[SECOND_JIMS_CHECK_DATE] [datetime] NULL,&#xA;&#x9;[SECOND_JIMS_CHECK_LOCATION] [varchar](50) NULL,&#xA;&#x9;[PROBATION_IND] [bit] NULL,&#xA;&#x9;[PAROLE_IND] [bit] NULL,&#xA;&#x9;[HOLD_IND] [bit] NULL,&#xA;&#x9;[FUGITIVE_IND] [bit] NULL,&#xA;&#x9;[FAIL_TO_APPEAR_IND] [bit] NULL,&#xA;&#x9;[BOND_IND] [bit] NULL,&#xA;&#x9;[HPD_NUMBER] [varchar](15) NULL,&#xA;&#x9;[SO_NUMBER] [varchar](15) NULL,&#xA;&#x9;[CCH_CORRECT_NEEDED] [bit] NULL,&#xA;&#x9;[UPDATED_BY] [varchar](80) NULL,&#xA;&#x9;[REG_SEX_OFFENDER] [bit] NULL,&#xA;&#x9;[UNDER_PROTECTIVE_ORDER] [bit] NULL,&#xA;&#x9;[UNKNOWN_OFF_LVL_CONV] [varchar](3) NULL,&#xA;&#x9;[HANDGUN_LICENSE] [bit] NULL,&#xA;&#x9;[PROBATION_COMMENT] [varchar](255) NULL,&#xA;&#x9;[PAROLE_COMMENT] [varchar](255) NULL,&#xA;&#x9;[ONBOND_COMMENT] [varchar](255) NULL,&#xA;&#x9;[HOLDS_COMMENT] [varchar](255) NULL,&#xA;&#x9;[FUGITIVE_WAR_COMMENT] [varchar](255) NULL,&#xA;&#x9;[PREV_FTA_COMMENT] [varchar](255) NULL,&#xA;&#x9;[NUM_VIOLENT_CONV] [varchar](3) NULL,&#xA;&#x9;[NUM_JUVENILE_DISP] [varchar](3) NULL,&#xA;&#x9;[FBI_NUM] [varchar](10) NULL,&#xA;&#x9;[SID] [varchar](50) NULL,&#xA;&#x9;[ADDRESS_CHECKED] [varchar](1) NULL,&#xA;&#x9;[CREATEDATE] [datetime] NULL,&#xA;&#x9;[CREATEUSER] [varchar](100) NULL,&#xA;&#x9;[UPDATEDATE] [datetime] NULL,&#xA;&#x9;[UPDATEUSER] [varchar](100) NULL,&#xA;&#x9;[ROWSTATUS] [varchar](2) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2077,7 +2098,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[PRPIN].[vBM_DefendantAddressSTG]</property>
+                  name="OpenRowset">[pts].[DefendantAddressSTG]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2418,13 +2439,11 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="INTERVIEW_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
@@ -2433,7 +2452,8 @@
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="CREATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEDATE]"
@@ -2442,162 +2462,186 @@
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="UPDATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWSTATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="ROWSTATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STREET_NUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="20"
                       name="STREET_NUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STREET_NAME]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="STREET_NAME" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STREET_TYPE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="STREET_TYPE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STREET_TYPE_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="STREET_TYPE_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[APT_NUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="20"
                       name="APT_NUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMPLEX_NAME]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="COMPLEX_NAME" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="CITY" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="STATE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="STATE_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ZIPCODE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="5"
                       name="ZIPCODE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ZIPCODE_EXT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="5"
                       name="ZIPCODE_EXT" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="COUNTRY" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="COUNTRY_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESS_TYPE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="ADDRESS_TYPE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESS_TYPE_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="ADDRESS_TYPE_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="COUNTY" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTY_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="COUNTY_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VALIDATION_STATUS]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="VALIDATION_STATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PARENT_TABLE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="25"
                       name="PARENT_TABLE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PARENT_ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="PARENT_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESS_STATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="ADDRESS_STATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESS_STATUS_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="ADDRESS_STATUS_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CAN_RETURN]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="CAN_RETURN" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LENGTH_RESIDENCE_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="3"
                       name="LENGTH_RESIDENCE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LENGTH_RESIDENCE_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="LENGTH_RESIDENCE_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESS_RESPONSIBILITY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="ADDRESS_RESPONSIBILITY" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESS_RESPONSIBILITY_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="ADDRESS_RESPONSIBILITY_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LANDLINE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="10"
                       name="LANDLINE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMMENT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="250"
                       name="COMMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantAddressSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LENGTH_RESIDENCE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="LENGTH_RESIDENCE" />
                   </externalMetadataColumns>
                 </input>
@@ -3575,12 +3619,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_DefendantAddressSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_DefendantAddressSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_DefendantAddressSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_DefendantAddressSTG](&#xA;INTERVIEW_ID&#x9; VARCHAR(MAX) NULL,&#xA;ID&#x9; VARCHAR(MAX) NULL,&#xA;STREET_NUM&#x9; VARCHAR(MAX) NULL,&#xA;STREET_NAME&#x9; VARCHAR(MAX) NULL,&#xA;STREET_TYPE&#x9; VARCHAR(MAX) NULL,&#xA;STREET_TYPE_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;APT_NUM&#x9; VARCHAR(MAX) NULL,&#xA;COMPLEX_NAME&#x9; VARCHAR(MAX) NULL,&#xA;CITY&#x9; VARCHAR(MAX) NULL,&#xA;STATE&#x9; VARCHAR(MAX) NULL,&#xA;STATE_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;ZIPCODE&#x9; VARCHAR(MAX) NULL,&#xA;ZIPCODE_EXT&#x9; VARCHAR(MAX) NULL,&#xA;COUNTRY&#x9; VARCHAR(MAX) NULL,&#xA;COUNTRY_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;ADDRESS_TYPE&#x9; VARCHAR(MAX) NULL,&#xA;ADDRESS_TYPE_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;COUNTY&#x9; VARCHAR(MAX) NULL,&#xA;COUNTY_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;VALIDATION_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;PARENT_TABLE&#x9; VARCHAR(MAX) NULL,&#xA;PARENT_ID&#x9; VARCHAR(MAX) NULL,&#xA;ADDRESS_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;ADDRESS_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;CAN_RETURN&#x9; VARCHAR(MAX) NULL,&#xA;LENGTH_RESIDENCE_IND&#x9; VARCHAR(MAX) NULL,&#xA;LENGTH_RESIDENCE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;ADDRESS_RESPONSIBILITY&#x9; VARCHAR(MAX) NULL,&#xA;ADDRESS_RESPONSIBILITY_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;LANDLINE&#x9; VARCHAR(MAX) NULL,&#xA;COMMENT&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL,&#xA;LENGTH_RESIDENCE&#x9; VARCHAR(MAX) NULL&#xA;&#xA;&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'pts'&#xA;    AND TABLE_NAME = 'DefendantAddressSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [pts].[DefendantAddressSTG]&#xA;GO&#xA;&#xA;&#xA;CREATE TABLE [pts].[DefendantAddressSTG](&#xA;&#x9;[INTERVIEW_ID] [int] NULL,&#xA;&#x9;[ID] [int] NULL,&#xA;&#x9;[STREET_NUM] [varchar](20) NULL,&#xA;&#x9;[STREET_NAME] [varchar](255) NULL,&#xA;&#x9;[STREET_TYPE] [varchar](50) NULL,&#xA;&#x9;[STREET_TYPE_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[APT_NUM] [varchar](20) NULL,&#xA;&#x9;[COMPLEX_NAME] [varchar](255) NULL,&#xA;&#x9;[CITY] [varchar](100) NULL,&#xA;&#x9;[STATE] [varchar](2) NULL,&#xA;&#x9;[STATE_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[ZIPCODE] [varchar](5) NULL,&#xA;&#x9;[ZIPCODE_EXT] [varchar](5) NULL,&#xA;&#x9;[COUNTRY] [varchar](2) NULL,&#xA;&#x9;[COUNTRY_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[ADDRESS_TYPE] [varchar](50) NULL,&#xA;&#x9;[ADDRESS_TYPE_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[COUNTY] [varchar](100) NULL,&#xA;&#x9;[COUNTY_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[VALIDATION_STATUS] [bit] NULL,&#xA;&#x9;[PARENT_TABLE] [varchar](25) NULL,&#xA;&#x9;[PARENT_ID] [int] NULL,&#xA;&#x9;[ADDRESS_STATUS] [varchar](50) NULL,&#xA;&#x9;[ADDRESS_STATUS_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[CAN_RETURN] [bit] NULL,&#xA;&#x9;[LENGTH_RESIDENCE_IND] [varchar](3) NULL,&#xA;&#x9;[LENGTH_RESIDENCE_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[ADDRESS_RESPONSIBILITY] [varchar](50) NULL,&#xA;&#x9;[ADDRESS_RESPONSIBILITY_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[LANDLINE] [varchar](10) NULL,&#xA;&#x9;[COMMENT] [varchar](250) NULL,&#xA;&#x9;[CREATEDATE] [datetime] NULL,&#xA;&#x9;[CREATEUSER] [varchar](100) NULL,&#xA;&#x9;[UPDATEDATE] [datetime] NULL,&#xA;&#x9;[UPDATEUSER] [varchar](100) NULL,&#xA;&#x9;[ROWSTATUS] [varchar](2) NULL,&#xA;&#x9;[LENGTH_RESIDENCE] [int] NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -3613,7 +3657,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[PRPIN].[vBM_DefendantSTG]</property>
+                  name="OpenRowset">[pts].[DefendantSTG]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -4164,28 +4208,27 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="INTERVIEW_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMMENTS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="COMMENTS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HANDGUN_LICENSE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="HANDGUN_LICENSE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FBI_NUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="9"
                       name="FBI_NUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
@@ -4194,7 +4237,8 @@
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="CREATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEDATE]"
@@ -4203,47 +4247,52 @@
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="UPDATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWSTATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="ROWSTATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AGE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="AGE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CITIZEN]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="CITIZEN" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CITIZEN_STATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="CITIZEN_STATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CITIZEN_STATUS_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="CITIZEN_STATUS_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DL_NUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="25"
                       name="DL_NUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DL_STATE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="DL_STATE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDCARD_STATE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="IDCARD_STATE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DATEOFBIRTH]"
@@ -4252,232 +4301,272 @@
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ETHNICITY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="ETHNICITY" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ETHNICITY_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="ETHNICITY_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EYE_COLOR]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="EYE_COLOR" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EYE_COLOR_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="EYE_COLOR_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HAIR_COLOR]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="HAIR_COLOR" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HAIR_COLOR_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="HAIR_COLOR_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HEIGHT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="3"
                       name="HEIGHT" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LANGUAGE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="LANGUAGE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LANGUAGE_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="LANGUAGE_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MARITAL_STATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="MARITAL_STATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MARITAL_STATUS_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="MARITAL_STATUS_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MILITARY_BRANCH]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="MILITARY_BRANCH" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MILITARY_BRANCH_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="MILITARY_BRANCH_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MILITARY_STATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="MILITARY_STATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MILITARY_STATUS_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="MILITARY_STATUS_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RACE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="RACE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RACE_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="RACE_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEX]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="SEX" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEX_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="SEX_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SPN]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="10"
                       name="SPN" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSN]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="9"
                       name="SSN" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSN_STATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="SSN_STATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSN_STATUS_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="SSN_STATUS_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE_ID_NUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="10"
                       name="STATE_ID_NUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WEIGHT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="3"
                       name="WEIGHT" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BIRTH_STATE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="BIRTH_STATE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BIRTH_STATE_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="BIRTH_STATE_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BIRTH_COUNTRY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="BIRTH_COUNTRY" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BIRTH_COUNTRY_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="BIRTH_COUNTRY_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMMENTDATE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="dbTimeStamp"
                       name="COMMENTDATE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMMENTUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="80"
                       name="COMMENTUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EXPOTHERLANGUAGE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="25"
                       name="EXPOTHERLANGUAGE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDCARDNUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="15"
                       name="IDCARDNUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERPRETERTYPE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="INTERPRETERTYPE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERPRETERTYPE_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="INTERPRETERTYPE_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERPRETERUSED]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="INTERPRETERUSED" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHERIDNUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="15"
                       name="OTHERIDNUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHERIDTYPE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="30"
                       name="OTHERIDTYPE" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SCARSMARKS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="150"
                       name="SCARSMARKS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TATTOOS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="150"
                       name="TATTOOS" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERPRETERFNAME]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="INTERPRETERFNAME" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERPRETERMNAME]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="INTERPRETERMNAME" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERPRETERLNAME]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="75"
                       name="INTERPRETERLNAME" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LANGUAGE_USED_INTERVIEW]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="LANGUAGE_USED_INTERVIEW" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LANGUAGE_USED_INTERVIEW_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="LANGUAGE_USED_INTERVIEW_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_DefendantSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMBAT_ZONE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="COMBAT_ZONE" />
                   </externalMetadataColumns>
                 </input>
@@ -6085,12 +6174,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_DefendantSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_DefendantSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_DefendantSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_DefendantSTG](&#xA;ID&#x9; VARCHAR(MAX) NULL,&#xA;AGE&#x9; VARCHAR(MAX) NULL,&#xA;CITIZEN&#x9; VARCHAR(MAX) NULL,&#xA;CITIZEN_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;CITIZEN_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;DL_NUM&#x9; VARCHAR(MAX) NULL,&#xA;DL_STATE&#x9; VARCHAR(MAX) NULL,&#xA;IDCARD_STATE&#x9; VARCHAR(MAX) NULL,&#xA;DATEOFBIRTH&#x9;DATETIME NULL,&#xA;ETHNICITY&#x9; VARCHAR(MAX) NULL,&#xA;ETHNICITY_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;EYE_COLOR&#x9; VARCHAR(MAX) NULL,&#xA;EYE_COLOR_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;FBI_NUM&#x9; VARCHAR(MAX) NULL,&#xA;HAIR_COLOR&#x9; VARCHAR(MAX) NULL,&#xA;HAIR_COLOR_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;HEIGHT&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_ID&#x9; VARCHAR(MAX) NULL,&#xA;LANGUAGE&#x9; VARCHAR(MAX) NULL,&#xA;LANGUAGE_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;MARITAL_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;MARITAL_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;MILITARY_BRANCH&#x9; VARCHAR(MAX) NULL,&#xA;MILITARY_BRANCH_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;MILITARY_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;MILITARY_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;RACE&#x9; VARCHAR(MAX) NULL,&#xA;RACE_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;SEX&#x9; VARCHAR(MAX) NULL,&#xA;SEX_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;SPN&#x9; VARCHAR(MAX) NULL,&#xA;SSN&#x9; VARCHAR(MAX) NULL,&#xA;SSN_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;SSN_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;STATE_ID_NUM&#x9; VARCHAR(MAX) NULL,&#xA;WEIGHT&#x9; VARCHAR(MAX) NULL,&#xA;HANDGUN_LICENSE&#x9; VARCHAR(MAX) NULL,&#xA;BIRTH_STATE&#x9; VARCHAR(MAX) NULL,&#xA;BIRTH_STATE_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;BIRTH_COUNTRY&#x9; VARCHAR(MAX) NULL,&#xA;BIRTH_COUNTRY_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;COMMENTDATE&#x9; VARCHAR(MAX) NULL,&#xA;COMMENTUSER&#x9; VARCHAR(MAX) NULL,&#xA;COMMENTS&#x9; VARCHAR(MAX) NULL,&#xA;EXPOTHERLANGUAGE&#x9; VARCHAR(MAX) NULL,&#xA;IDCARDNUM&#x9; VARCHAR(MAX) NULL,&#xA;INTERPRETERTYPE&#x9; VARCHAR(MAX) NULL,&#xA;INTERPRETERTYPE_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INTERPRETERUSED&#x9; VARCHAR(MAX) NULL,&#xA;OTHERIDNUM&#x9; VARCHAR(MAX) NULL,&#xA;OTHERIDTYPE&#x9; VARCHAR(MAX) NULL,&#xA;SCARSMARKS&#x9; VARCHAR(MAX) NULL,&#xA;TATTOOS&#x9; VARCHAR(MAX) NULL,&#xA;INTERPRETERFNAME&#x9; VARCHAR(MAX) NULL,&#xA;INTERPRETERMNAME&#x9; VARCHAR(MAX) NULL,&#xA;INTERPRETERLNAME&#x9; VARCHAR(MAX) NULL,&#xA;LANGUAGE_USED_INTERVIEW&#x9; VARCHAR(MAX) NULL,&#xA;LANGUAGE_USED_INTERVIEW_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;COMBAT_ZONE&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL&#xA;&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'pts'&#xA;    AND TABLE_NAME = 'DefendantSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [pts].[DefendantSTG]&#xA;GO&#xA;&#xA;CREATE TABLE [pts].[DefendantSTG](&#xA;&#x9;[ID] [int] NULL,&#xA;&#x9;[AGE] [int] NULL,&#xA;&#x9;[CITIZEN] [bit] NULL,&#xA;&#x9;[CITIZEN_STATUS] [varchar](50) NULL,&#xA;&#x9;[CITIZEN_STATUS_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[DL_NUM] [varchar](25) NULL,&#xA;&#x9;[DL_STATE] [varchar](50) NULL,&#xA;&#x9;[IDCARD_STATE] [varchar](50) NULL,&#xA;&#x9;[DATEOFBIRTH] [datetime] NULL,&#xA;&#x9;[ETHNICITY] [varchar](50) NULL,&#xA;&#x9;[ETHNICITY_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[EYE_COLOR] [varchar](50) NULL,&#xA;&#x9;[EYE_COLOR_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[FBI_NUM] [varchar](9) NULL,&#xA;&#x9;[HAIR_COLOR] [varchar](50) NULL,&#xA;&#x9;[HAIR_COLOR_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[HEIGHT] [varchar](3) NULL,&#xA;&#x9;[INTERVIEW_ID] [int] NULL,&#xA;&#x9;[LANGUAGE] [varchar](50) NULL,&#xA;&#x9;[LANGUAGE_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[MARITAL_STATUS] [varchar](50) NULL,&#xA;&#x9;[MARITAL_STATUS_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[MILITARY_BRANCH] [varchar](50) NULL,&#xA;&#x9;[MILITARY_BRANCH_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[MILITARY_STATUS] [varchar](50) NULL,&#xA;&#x9;[MILITARY_STATUS_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[RACE] [varchar](50) NULL,&#xA;&#x9;[RACE_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[SEX] [varchar](50) NULL,&#xA;&#x9;[SEX_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[SPN] [varchar](10) NULL,&#xA;&#x9;[SSN] [varchar](9) NULL,&#xA;&#x9;[SSN_STATUS] [varchar](50) NULL,&#xA;&#x9;[SSN_STATUS_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[STATE_ID_NUM] [varchar](10) NULL,&#xA;&#x9;[WEIGHT] [varchar](3) NULL,&#xA;&#x9;[HANDGUN_LICENSE] [bit] NULL,&#xA;&#x9;[BIRTH_STATE] [varchar](50) NULL,&#xA;&#x9;[BIRTH_STATE_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[BIRTH_COUNTRY] [varchar](50) NULL,&#xA;&#x9;[BIRTH_COUNTRY_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[COMMENTDATE] [datetime] NULL,&#xA;&#x9;[COMMENTUSER] [varchar](80) NULL,&#xA;&#x9;[COMMENTS] [varchar](255) NULL,&#xA;&#x9;[EXPOTHERLANGUAGE] [varchar](25) NULL,&#xA;&#x9;[IDCARDNUM] [varchar](15) NULL,&#xA;&#x9;[INTERPRETERTYPE] [varchar](50) NULL,&#xA;&#x9;[INTERPRETERTYPE_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[INTERPRETERUSED] [bit] NULL,&#xA;&#x9;[OTHERIDNUM] [varchar](15) NULL,&#xA;&#x9;[OTHERIDTYPE] [varchar](30) NULL,&#xA;&#x9;[SCARSMARKS] [varchar](150) NULL,&#xA;&#x9;[TATTOOS] [varchar](150) NULL,&#xA;&#x9;[INTERPRETERFNAME] [varchar](50) NULL,&#xA;&#x9;[INTERPRETERMNAME] [varchar](50) NULL,&#xA;&#x9;[INTERPRETERLNAME] [varchar](75) NULL,&#xA;&#x9;[LANGUAGE_USED_INTERVIEW] [varchar](50) NULL,&#xA;&#x9;[LANGUAGE_USED_INTERVIEW_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[COMBAT_ZONE] [bit] NULL,&#xA;&#x9;[CREATEDATE] [datetime] NULL,&#xA;&#x9;[CREATEUSER] [varchar](100) NULL,&#xA;&#x9;[UPDATEDATE] [datetime] NULL,&#xA;&#x9;[UPDATEUSER] [varchar](100) NULL,&#xA;&#x9;[ROWSTATUS] [varchar](2) NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -6123,7 +6212,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[PRPIN].[vBM_EducationSTG]</property>
+                  name="OpenRowset">[pts].[EducationSTG]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -6288,13 +6377,11 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\vBM_Education Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_Education Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="INTERVIEW_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_Education Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMMENTS]"
@@ -6802,7 +6889,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_Education SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6840,7 +6927,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[PRPIN].[vBM_FinancialItemSTG]</property>
+                  name="OpenRowset">[pts].[FinancialItemSTG]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -7733,8 +7820,7 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="INTERVIEW_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
@@ -7743,7 +7829,8 @@
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="CREATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEDATE]"
@@ -7752,547 +7839,590 @@
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="UPDATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWSTATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="ROWSTATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FINANCIAL_ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="FINANCIAL_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ASSISTANCE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="ASSISTANCE" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ASSISTANCE_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="ASSISTANCE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ASSISTANCE_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="ASSISTANCE_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INVEST_INCOME]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="INVEST_INCOME" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INVEST_INCOME_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="INVEST_INCOME_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INVEST_INCOME_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="INVEST_INCOME_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RENTAL]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="RENTAL" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RENTAL_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="RENTAL_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RENTAL_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="RENTAL_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RETIREMENT]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="RETIREMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RETIREMENT_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="RETIREMENT_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RETIREMENT_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="RETIREMENT_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SOCIAL_SEC]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="SOCIAL_SEC" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SOCIAL_SEC_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="SOCIAL_SEC_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SOCIAL_SEC_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="SOCIAL_SEC_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UNEMPLOYMENT]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="UNEMPLOYMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UNEMPLOYMENT_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="UNEMPLOYMENT_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UNEMPLOYMENT_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="UNEMPLOYMENT_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VA_MON_BENEFITS]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="VA_MON_BENEFITS" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VA_MON_BENEFITS_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="VA_MON_BENEFITS_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VA_MON_BENEFITS_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="VA_MON_BENEFITS_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WORKERS_COMP]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="WORKERS_COMP" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WORKERS_COMP_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="WORKERS_COMP_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WORKERS_COMP_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="WORKERS_COMP_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHER_INCOME]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="OTHER_INCOME" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHER_INCOME_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="OTHER_INCOME_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHER_INCOME_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="OTHER_INCOME_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FOOD_STAMPS_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="FOOD_STAMPS_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FOOD_STAMPS_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="FOOD_STAMPS_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PUBLIC_HOUSING_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="PUBLIC_HOUSING_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PUBLIC_HOUSING_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="PUBLIC_HOUSING_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REC_MEDICARE_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="REC_MEDICARE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REC_MEDICARE_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="REC_MEDICARE_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TANF_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="TANF_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TANF_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="TANF_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VA_BENEFITS_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="VA_BENEFITS_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VA_BENEFITS_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="VA_BENEFITS_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MORTGAGE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="MORTGAGE" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MORTGAGE_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="MORTGAGE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MORTGAGE_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="MORTGAGE_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOME_INSURANCE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="HOME_INSURANCE" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOME_INSURANCE_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="HOME_INSURANCE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOME_INSURANCE_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="HOME_INSURANCE_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ELECTRICITY]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="ELECTRICITY" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ELECTRICITY_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="ELECTRICITY_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ELECTRICITY_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="ELECTRICITY_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UTILITY_GAS]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="UTILITY_GAS" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UTILITY_GAS_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="UTILITY_GAS_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UTILITY_GAS_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="UTILITY_GAS_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WATER]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="WATER" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WATER_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="WATER_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WATER_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="WATER_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FOOD]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="FOOD" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FOOD_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="FOOD_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FOOD_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="FOOD_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOME_PHONE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="HOME_PHONE" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOME_PHONE_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="HOME_PHONE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HOME_PHONE_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="HOME_PHONE_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CELL_PHONE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="CELL_PHONE" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CELL_PHONE_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="CELL_PHONE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CELL_PHONE_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="CELL_PHONE_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TV_INTERNET]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="TV_INTERNET" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TV_INTERNET_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="TV_INTERNET_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TV_INTERNET_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="TV_INTERNET_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_PROB]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="PAROLE_PROB" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_PROB_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="PAROLE_PROB_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_PROB_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="PAROLE_PROB_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHER_COURT_FEES]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="OTHER_COURT_FEES" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHER_COURT_FEES_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="OTHER_COURT_FEES_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHER_COURT_FEES_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="OTHER_COURT_FEES_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHER_EXPENSE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="OTHER_EXPENSE" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHER_EXPENSE_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="OTHER_EXPENSE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHER_EXPENSE_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="OTHER_EXPENSE_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VEHICLE_GAS]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="VEHICLE_GAS" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VEHICLE_GAS_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="VEHICLE_GAS_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VEHICLE_GAS_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="VEHICLE_GAS_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VEHICLE_INS]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="VEHICLE_INS" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VEHICLE_INS_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="VEHICLE_INS_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VEHICLE_INS_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="VEHICLE_INS_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[METRO_PASS]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="METRO_PASS" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[METRO_PASS_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="METRO_PASS_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[METRO_PASS_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="METRO_PASS_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VEHICLE_PMT]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="VEHICLE_PMT" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VEHICLE_PMT_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="VEHICLE_PMT_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VEHICLE_PMT_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="VEHICLE_PMT_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FAMILY_SUPPT]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="FAMILY_SUPPT" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FAMILY_SUPPT_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="FAMILY_SUPPT_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FAMILY_SUPPT_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="FAMILY_SUPPT_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CHILD_CARE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="CHILD_CARE" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CHILD_CARE_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="CHILD_CARE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CHILD_CARE_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="CHILD_CARE_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COURT_CHILD_SUPPT]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="COURT_CHILD_SUPPT" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COURT_CHILD_SUPPT_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="COURT_CHILD_SUPPT_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COURT_CHILD_SUPPT_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="COURT_CHILD_SUPPT_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MEDICAL_SUPPLY]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="MEDICAL_SUPPLY" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MEDICAL_SUPPLY_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="MEDICAL_SUPPLY_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MEDICAL_SUPPLY_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="MEDICAL_SUPPLY_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HEALTH_INS]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="HEALTH_INS" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HEALTH_INS_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="HEALTH_INS_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HEALTH_INS_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="HEALTH_INS_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LOAN_PAYMENT]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="LOAN_PAYMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LOAN_PAYMENT_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="LOAN_PAYMENT_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LOAN_PAYMENT_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="LOAN_PAYMENT_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREDIT_CARD]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="CREDIT_CARD" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREDIT_CARD_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="CREDIT_CARD_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialItem Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREDIT_CARD_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="CREDIT_CARD_IND_DESCRIPTION" />
                   </externalMetadataColumns>
                 </input>
@@ -10931,7 +11061,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_FinancialItemSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_FinancialItemSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_FinancialItemSTG](&#xA; INTERVIEW_ID&#x9; VARCHAR(MAX) NULL,&#xA;FINANCIAL_ID&#x9; VARCHAR(MAX) NULL,&#xA;ASSISTANCE&#x9; VARCHAR(MAX) NULL,&#xA;ASSISTANCE_IND&#x9; VARCHAR(MAX) NULL,&#xA;ASSISTANCE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INVEST_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;INVEST_INCOME_IND&#x9; VARCHAR(MAX) NULL,&#xA;INVEST_INCOME_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;RENTAL&#x9; VARCHAR(MAX) NULL,&#xA;RENTAL_IND&#x9; VARCHAR(MAX) NULL,&#xA;RENTAL_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;RETIREMENT&#x9; VARCHAR(MAX) NULL,&#xA;RETIREMENT_IND&#x9; VARCHAR(MAX) NULL,&#xA;RETIREMENT_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;SOCIAL_SEC&#x9; VARCHAR(MAX) NULL,&#xA;SOCIAL_SEC_IND&#x9; VARCHAR(MAX) NULL,&#xA;SOCIAL_SEC_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;UNEMPLOYMENT&#x9; VARCHAR(MAX) NULL,&#xA;UNEMPLOYMENT_IND&#x9; VARCHAR(MAX) NULL,&#xA;UNEMPLOYMENT_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;VA_MON_BENEFITS&#x9; VARCHAR(MAX) NULL,&#xA;VA_MON_BENEFITS_IND&#x9; VARCHAR(MAX) NULL,&#xA;VA_MON_BENEFITS_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;WORKERS_COMP&#x9; VARCHAR(MAX) NULL,&#xA;WORKERS_COMP_IND&#x9; VARCHAR(MAX) NULL,&#xA;WORKERS_COMP_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_INCOME_IND&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_INCOME_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;FOOD_STAMPS_IND&#x9; VARCHAR(MAX) NULL,&#xA;FOOD_STAMPS_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PUBLIC_HOUSING_IND&#x9; VARCHAR(MAX) NULL,&#xA;PUBLIC_HOUSING_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;REC_MEDICARE_IND&#x9; VARCHAR(MAX) NULL,&#xA;REC_MEDICARE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;TANF_IND&#x9; VARCHAR(MAX) NULL,&#xA;TANF_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;VA_BENEFITS_IND&#x9; VARCHAR(MAX) NULL,&#xA;VA_BENEFITS_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;MORTGAGE&#x9; VARCHAR(MAX) NULL,&#xA;MORTGAGE_IND&#x9; VARCHAR(MAX) NULL,&#xA;MORTGAGE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;HOME_INSURANCE&#x9; VARCHAR(MAX) NULL,&#xA;HOME_INSURANCE_IND&#x9; VARCHAR(MAX) NULL,&#xA;HOME_INSURANCE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;ELECTRICITY&#x9; VARCHAR(MAX) NULL,&#xA;ELECTRICITY_IND&#x9; VARCHAR(MAX) NULL,&#xA;ELECTRICITY_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;UTILITY_GAS&#x9; VARCHAR(MAX) NULL,&#xA;UTILITY_GAS_IND&#x9; VARCHAR(MAX) NULL,&#xA;UTILITY_GAS_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;WATER&#x9; VARCHAR(MAX) NULL,&#xA;WATER_IND&#x9; VARCHAR(MAX) NULL,&#xA;WATER_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;FOOD&#x9; VARCHAR(MAX) NULL,&#xA;FOOD_IND&#x9; VARCHAR(MAX) NULL,&#xA;FOOD_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;HOME_PHONE&#x9; VARCHAR(MAX) NULL,&#xA;HOME_PHONE_IND&#x9; VARCHAR(MAX) NULL,&#xA;HOME_PHONE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;CELL_PHONE&#x9; VARCHAR(MAX) NULL,&#xA;CELL_PHONE_IND&#x9; VARCHAR(MAX) NULL,&#xA;CELL_PHONE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;TV_INTERNET&#x9; VARCHAR(MAX) NULL,&#xA;TV_INTERNET_IND&#x9; VARCHAR(MAX) NULL,&#xA;TV_INTERNET_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PAROLE_PROB&#x9; VARCHAR(MAX) NULL,&#xA;PAROLE_PROB_IND&#x9; VARCHAR(MAX) NULL,&#xA;PAROLE_PROB_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_COURT_FEES&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_COURT_FEES_IND&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_COURT_FEES_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_EXPENSE&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_EXPENSE_IND&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_EXPENSE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;VEHICLE_GAS&#x9; VARCHAR(MAX) NULL,&#xA;VEHICLE_GAS_IND&#x9; VARCHAR(MAX) NULL,&#xA;VEHICLE_GAS_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;VEHICLE_INS&#x9; VARCHAR(MAX) NULL,&#xA;VEHICLE_INS_IND&#x9; VARCHAR(MAX) NULL,&#xA;VEHICLE_INS_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;METRO_PASS&#x9; VARCHAR(MAX) NULL,&#xA;METRO_PASS_IND&#x9; VARCHAR(MAX) NULL,&#xA;METRO_PASS_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;VEHICLE_PMT&#x9; VARCHAR(MAX) NULL,&#xA;VEHICLE_PMT_IND&#x9; VARCHAR(MAX) NULL,&#xA;VEHICLE_PMT_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;FAMILY_SUPPT&#x9; VARCHAR(MAX) NULL,&#xA;FAMILY_SUPPT_IND&#x9; VARCHAR(MAX) NULL,&#xA;FAMILY_SUPPT_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;CHILD_CARE&#x9; VARCHAR(MAX) NULL,&#xA;CHILD_CARE_IND&#x9; VARCHAR(MAX) NULL,&#xA;CHILD_CARE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;COURT_CHILD_SUPPT&#x9; VARCHAR(MAX) NULL,&#xA;COURT_CHILD_SUPPT_IND&#x9; VARCHAR(MAX) NULL,&#xA;COURT_CHILD_SUPPT_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;MEDICAL_SUPPLY&#x9; VARCHAR(MAX) NULL,&#xA;MEDICAL_SUPPLY_IND&#x9; VARCHAR(MAX) NULL,&#xA;MEDICAL_SUPPLY_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;HEALTH_INS&#x9; VARCHAR(MAX) NULL,&#xA;HEALTH_INS_IND&#x9; VARCHAR(MAX) NULL,&#xA;HEALTH_INS_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;LOAN_PAYMENT&#x9; VARCHAR(MAX) NULL,&#xA;LOAN_PAYMENT_IND&#x9; VARCHAR(MAX) NULL,&#xA;LOAN_PAYMENT_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;CREDIT_CARD&#x9; VARCHAR(MAX) NULL,&#xA;CREDIT_CARD_IND&#x9; VARCHAR(MAX) NULL,&#xA;CREDIT_CARD_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL&#xA;&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'pts'&#xA;    AND TABLE_NAME = 'FinancialItemSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE [pts].[FinancialItemSTG]&#xA;GO&#xA;CREATE TABLE [pts].[FinancialItemSTG](&#xA;&#x9;[INTERVIEW_ID] [int] NULL,&#xA;&#x9;[FINANCIAL_ID] [int] NULL,&#xA;&#x9;[ASSISTANCE] [int] NULL,&#xA;&#x9;[ASSISTANCE_IND] [varchar](50) NULL,&#xA;&#x9;[ASSISTANCE_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[INVEST_INCOME] [int] NULL,&#xA;&#x9;[INVEST_INCOME_IND] [varchar](50) NULL,&#xA;&#x9;[INVEST_INCOME_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[RENTAL] [int] NULL,&#xA;&#x9;[RENTAL_IND] [varchar](50) NULL,&#xA;&#x9;[RENTAL_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[RETIREMENT] [int] NULL,&#xA;&#x9;[RETIREMENT_IND] [varchar](50) NULL,&#xA;&#x9;[RETIREMENT_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[SOCIAL_SEC] [int] NULL,&#xA;&#x9;[SOCIAL_SEC_IND] [varchar](50) NULL,&#xA;&#x9;[SOCIAL_SEC_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[UNEMPLOYMENT] [int] NULL,&#xA;&#x9;[UNEMPLOYMENT_IND] [varchar](50) NULL,&#xA;&#x9;[UNEMPLOYMENT_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[VA_MON_BENEFITS] [int] NULL,&#xA;&#x9;[VA_MON_BENEFITS_IND] [varchar](50) NULL,&#xA;&#x9;[VA_MON_BENEFITS_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[WORKERS_COMP] [int] NULL,&#xA;&#x9;[WORKERS_COMP_IND] [varchar](50) NULL,&#xA;&#x9;[WORKERS_COMP_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[OTHER_INCOME] [int] NULL,&#xA;&#x9;[OTHER_INCOME_IND] [varchar](50) NULL,&#xA;&#x9;[OTHER_INCOME_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[FOOD_STAMPS_IND] [varchar](50) NULL,&#xA;&#x9;[FOOD_STAMPS_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[PUBLIC_HOUSING_IND] [varchar](50) NULL,&#xA;&#x9;[PUBLIC_HOUSING_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[REC_MEDICARE_IND] [varchar](50) NULL,&#xA;&#x9;[REC_MEDICARE_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[TANF_IND] [varchar](50) NULL,&#xA;&#x9;[TANF_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[VA_BENEFITS_IND] [varchar](50) NULL,&#xA;&#x9;[VA_BENEFITS_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[MORTGAGE] [int] NULL,&#xA;&#x9;[MORTGAGE_IND] [varchar](50) NULL,&#xA;&#x9;[MORTGAGE_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[HOME_INSURANCE] [int] NULL,&#xA;&#x9;[HOME_INSURANCE_IND] [varchar](50) NULL,&#xA;&#x9;[HOME_INSURANCE_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[ELECTRICITY] [int] NULL,&#xA;&#x9;[ELECTRICITY_IND] [varchar](50) NULL,&#xA;&#x9;[ELECTRICITY_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[UTILITY_GAS] [int] NULL,&#xA;&#x9;[UTILITY_GAS_IND] [varchar](50) NULL,&#xA;&#x9;[UTILITY_GAS_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[WATER] [int] NULL,&#xA;&#x9;[WATER_IND] [varchar](50) NULL,&#xA;&#x9;[WATER_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[FOOD] [int] NULL,&#xA;&#x9;[FOOD_IND] [varchar](50) NULL,&#xA;&#x9;[FOOD_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[HOME_PHONE] [int] NULL,&#xA;&#x9;[HOME_PHONE_IND] [varchar](50) NULL,&#xA;&#x9;[HOME_PHONE_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[CELL_PHONE] [int] NULL,&#xA;&#x9;[CELL_PHONE_IND] [varchar](50) NULL,&#xA;&#x9;[CELL_PHONE_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[TV_INTERNET] [int] NULL,&#xA;&#x9;[TV_INTERNET_IND] [varchar](50) NULL,&#xA;&#x9;[TV_INTERNET_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[PAROLE_PROB] [int] NULL,&#xA;&#x9;[PAROLE_PROB_IND] [varchar](50) NULL,&#xA;&#x9;[PAROLE_PROB_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[OTHER_COURT_FEES] [int] NULL,&#xA;&#x9;[OTHER_COURT_FEES_IND] [varchar](50) NULL,&#xA;&#x9;[OTHER_COURT_FEES_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[OTHER_EXPENSE] [int] NULL,&#xA;&#x9;[OTHER_EXPENSE_IND] [varchar](50) NULL,&#xA;&#x9;[OTHER_EXPENSE_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[VEHICLE_GAS] [int] NULL,&#xA;&#x9;[VEHICLE_GAS_IND] [varchar](50) NULL,&#xA;&#x9;[VEHICLE_GAS_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[VEHICLE_INS] [int] NULL,&#xA;&#x9;[VEHICLE_INS_IND] [varchar](50) NULL,&#xA;&#x9;[VEHICLE_INS_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[METRO_PASS] [int] NULL,&#xA;&#x9;[METRO_PASS_IND] [varchar](50) NULL,&#xA;&#x9;[METRO_PASS_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[VEHICLE_PMT] [int] NULL,&#xA;&#x9;[VEHICLE_PMT_IND] [varchar](50) NULL,&#xA;&#x9;[VEHICLE_PMT_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[FAMILY_SUPPT] [int] NULL,&#xA;&#x9;[FAMILY_SUPPT_IND] [varchar](50) NULL,&#xA;&#x9;[FAMILY_SUPPT_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[CHILD_CARE] [int] NULL,&#xA;&#x9;[CHILD_CARE_IND] [varchar](50) NULL,&#xA;&#x9;[CHILD_CARE_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[COURT_CHILD_SUPPT] [int] NULL,&#xA;&#x9;[COURT_CHILD_SUPPT_IND] [varchar](50) NULL,&#xA;&#x9;[COURT_CHILD_SUPPT_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[MEDICAL_SUPPLY] [int] NULL,&#xA;&#x9;[MEDICAL_SUPPLY_IND] [varchar](50) NULL,&#xA;&#x9;[MEDICAL_SUPPLY_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[HEALTH_INS] [int] NULL,&#xA;&#x9;[HEALTH_INS_IND] [varchar](50) NULL,&#xA;&#x9;[HEALTH_INS_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[LOAN_PAYMENT] [int] NULL,&#xA;&#x9;[LOAN_PAYMENT_IND] [varchar](50) NULL,&#xA;&#x9;[LOAN_PAYMENT_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[CREDIT_CARD] [int] NULL,&#xA;&#x9;[CREDIT_CARD_IND] [varchar](50) NULL,&#xA;&#x9;[CREDIT_CARD_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[CREATEUSER] [varchar](100) NULL,&#xA;&#x9;[CREATEDATE] [datetime] NULL,&#xA;&#x9;[UPDATEUSER] [varchar](100) NULL,&#xA;&#x9;[UPDATEDATE] [datetime] NULL,&#xA;&#x9;[ROWSTATUS] [varchar](2) NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -10964,7 +11094,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[PRPIN].[vBM_FinancialSTG]</property>
+                  name="OpenRowset">[pts].[FinancialSTG]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -11183,13 +11313,11 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="INTERVIEW_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
@@ -11198,7 +11326,8 @@
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="CREATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEDATE]"
@@ -11207,87 +11336,94 @@
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="UPDATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWSTATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="ROWSTATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OTHER_PROPERTY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="OTHER_PROPERTY" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SPOUSE_EMPLOYER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="SPOUSE_EMPLOYER" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EXPLAIN_INCOME]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="EXPLAIN_INCOME" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EXPENSE_COMMENT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="EXPENSE_COMMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INCOME_COMMENT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="INCOME_COMMENT" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TOTAL_MONTHLY_INCOME]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="TOTAL_MONTHLY_INCOME" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIMARY_INCOME_SOURCE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="PRIMARY_INCOME_SOURCE" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIMARY_INCOME_SOURCE_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="PRIMARY_INCOME_SOURCE_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIMARY_INCOME_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="PRIMARY_INCOME_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEF_INCOME]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="DEF_INCOME" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SPOUSE_INCOME]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="SPOUSE_INCOME" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FINANCIAL_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="FINANCIAL_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TOTAL_MONTHLY_EXPENSES]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="TOTAL_MONTHLY_EXPENSES" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONTINUE_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="CONTINUE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ASSET_COMMENT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="ASSET_COMMENT" />
                   </externalMetadataColumns>
                 </input>
@@ -11899,12 +12035,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_FinancialSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_FinancialSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_FinancialSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_FinancialSTG](&#xA; ID&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_ID&#x9; VARCHAR(MAX) NULL,&#xA;OTHER_PROPERTY&#x9; VARCHAR(MAX) NULL,&#xA;SPOUSE_EMPLOYER&#x9; VARCHAR(MAX) NULL,&#xA;EXPLAIN_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;EXPENSE_COMMENT&#x9; VARCHAR(MAX) NULL,&#xA;INCOME_COMMENT&#x9; VARCHAR(MAX) NULL,&#xA;TOTAL_MONTHLY_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;PRIMARY_INCOME_SOURCE&#x9; VARCHAR(MAX) NULL,&#xA;PRIMARY_INCOME_SOURCE_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PRIMARY_INCOME_IND&#x9; VARCHAR(MAX) NULL,&#xA;DEF_INCOME&#x9;VARCHAR(MAX) NULL,&#xA;SPOUSE_INCOME&#x9; VARCHAR(MAX) NULL,&#xA;FINANCIAL_IND&#x9; VARCHAR(MAX) NULL,&#xA;TOTAL_MONTHLY_EXPENSES&#x9; VARCHAR(MAX) NULL,&#xA;CONTINUE_IND&#x9; VARCHAR(MAX) NULL,&#xA;ASSET_COMMENT&#x9; VARCHAR(MAX) NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL&#xA;&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'pts'&#xA;    AND TABLE_NAME = 'FinancialSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [pts].[FinancialSTG]&#xA;GO&#xA;CREATE TABLE [pts].[FinancialSTG](&#xA;&#x9;[ID] [int] NULL,&#xA;&#x9;[INTERVIEW_ID] [int] NULL,&#xA;&#x9;[OTHER_PROPERTY] [varchar](255) NULL,&#xA;&#x9;[SPOUSE_EMPLOYER] [varchar](255) NULL,&#xA;&#x9;[EXPLAIN_INCOME] [varchar](255) NULL,&#xA;&#x9;[EXPENSE_COMMENT] [varchar](255) NULL,&#xA;&#x9;[INCOME_COMMENT] [varchar](255) NULL,&#xA;&#x9;[TOTAL_MONTHLY_INCOME] [int] NULL,&#xA;&#x9;[PRIMARY_INCOME_SOURCE] [varchar](50) NULL,&#xA;&#x9;[PRIMARY_INCOME_SOURCE_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[PRIMARY_INCOME_IND] [varchar](50) NULL,&#xA;&#x9;[DEF_INCOME] [int] NULL,&#xA;&#x9;[SPOUSE_INCOME] [int] NULL,&#xA;&#x9;[FINANCIAL_IND] [varchar](50) NULL,&#xA;&#x9;[TOTAL_MONTHLY_EXPENSES] [int] NULL,&#xA;&#x9;[CONTINUE_IND] [bit] NULL,&#xA;&#x9;[ASSET_COMMENT] [varchar](255) NULL,&#xA;&#x9;[CREATEUSER] [varchar](100) NULL,&#xA;&#x9;[CREATEDATE] [datetime] NULL,&#xA;&#x9;[UPDATEUSER] [varchar](100) NULL,&#xA;&#x9;[UPDATEDATE] [datetime] NULL,&#xA;&#x9;[ROWSTATUS] [varchar](2) NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -11922,6 +12058,80 @@
           version="1">
           <components>
             <component
+              refId="Package\vBM_Interview Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\vBM_Interview Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\vBM_Interview Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\vBM_Interview Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vBM_Interview Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[UpdateDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\vBM_Interview Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[UpdateDate]"
+                      name="UpdateDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,10)(DT_DBDATE)([GETDATE]())</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,10)(DT_DBDATE)(GETDATE())</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\vBM_Interview Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\vBM_Interview Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vBM_Interview Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vBM_Interview Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vBM_Interview Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vBM_Interview Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\vBM_Interview Data Flow Task\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -11937,7 +12147,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[PRPIN].[vBM_InterviewSTG]</property>
+                  name="OpenRowset">[pts].[InterviewSTG]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -12241,13 +12451,19 @@
                       cachedName="REFUSAL_IND"
                       externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REFUSAL_IND]"
                       lineageId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[REFUSAL_IND]" />
+                    <inputColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdateDate]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="UpdateDate"
+                      externalMetadataColumnId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastUpdateDTS]"
+                      lineageId="Package\vBM_Interview Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[UpdateDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
@@ -12256,7 +12472,8 @@
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="CREATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEDATE]"
@@ -12265,37 +12482,44 @@
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="UPDATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWSTATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="ROWSTATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CJIS_NUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="20"
                       name="CJIS_NUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DA_LOG_NUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="20"
                       name="DA_LOG_NUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEF_STATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="DEF_STATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEF_STATUS_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="DEF_STATUS_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDTYPE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="5"
                       name="IDTYPE" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_DT]"
@@ -12304,108 +12528,125 @@
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_LOCATION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="5"
                       name="INTERVIEW_LOCATION" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_LOCATION_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="INTERVIEW_LOCATION_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_LOCKED]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="INTERVIEW_LOCKED" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_REASON]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="3"
                       name="INTERVIEW_REASON" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_REASON_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="INTERVIEW_REASON_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_SHIFT]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="5"
                       name="INTERVIEW_SHIFT" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_TYPE]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="INTERVIEW_TYPE" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_Type_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="INTERVIEW_Type_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEWER_SPN]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="10"
                       name="INTERVIEWER_SPN" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_SUMMARY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="INTERVIEW_SUMMARY" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_STATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="INTERVIEW_STATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_STATUS_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="INTERVIEW_STATUS_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NAME_SEQ_NUM]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="10"
                       name="NAME_SEQ_NUM" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SPN]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="10"
                       name="SPN" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTED_SINCE_ARREST]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="CONTACTED_SINCE_ARREST" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LASTNAME]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="75"
                       name="LASTNAME" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRSTNAME]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="FIRSTNAME" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MIDDLENAME]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="MIDDLENAME" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MANUAL_INTERVIEW]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="MANUAL_INTERVIEW" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MANUALLY_ENTERED_BY]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="80"
                       name="MANUALLY_ENTERED_BY" />
                     <externalMetadataColumn
                       refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REFUSAL_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="REFUSAL_IND" />
+                    <externalMetadataColumn
+                      refId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastUpdateDTS]"
+                      dataType="dbTimeStamp"
+                      name="LastUpdateDTS" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -13269,8 +13510,13 @@
           </components>
           <paths>
             <path
-              refId="Package\vBM_Interview Data Flow Task.Paths[OLE DB Source Output]"
+              refId="Package\vBM_Interview Data Flow Task.Paths[Derived Column Output]"
               endId="Package\vBM_Interview Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\vBM_Interview Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\vBM_Interview Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\vBM_Interview Data Flow Task\Derived Column.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\vBM_Interview Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -13278,20 +13524,20 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\vBM_Interview SQL Task 3"
+      DTS:refId="Package\vBM_Interview SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{fc55e08b-c225-4d7a-beeb-2b7c5a873882}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="vBM_Interview SQL Task 3"
+      DTS:ObjectName="vBM_Interview SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_InterviewSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_InterviewSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_InterviewSTG](&#xA; ID&#x9; VARCHAR(MAX) NULL,&#xA;CJIS_NUM&#x9; VARCHAR(MAX) NULL,&#xA;DA_LOG_NUM&#x9; VARCHAR(MAX) NULL,&#xA;DEF_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;DEF_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;IDTYPE&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_DT&#x9;DATETIME NULL,&#xA;INTERVIEW_LOCATION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_LOCATION_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_LOCKED&#x9;VARCHAR(MAX) NULL,&#xA;INTERVIEW_REASON&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_REASON_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_SHIFT&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_TYPE&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_Type_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEWER_SPN&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_SUMMARY&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_STATUS&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_STATUS_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;NAME_SEQ_NUM&#x9; VARCHAR(MAX) NULL,&#xA;SPN&#x9; VARCHAR(MAX) NULL,&#xA;CONTACTED_SINCE_ARREST&#x9; VARCHAR(MAX) NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;LASTNAME&#x9; VARCHAR(MAX) NULL,&#xA;FIRSTNAME&#x9; VARCHAR(MAX) NULL,&#xA;MIDDLENAME&#x9; VARCHAR(MAX) NULL,&#xA;MANUAL_INTERVIEW&#x9; VARCHAR(MAX) NULL,&#xA;MANUALLY_ENTERED_BY&#x9; VARCHAR(MAX) NULL,&#xA;REFUSAL_IND&#x9; VARCHAR(MAX) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'pts'&#xA;    AND TABLE_NAME = 'InterviewSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE [pts].[InterviewSTG]&#xA;GO&#xA;&#xA;&#xA;CREATE TABLE [pts].[InterviewSTG](&#xA;&#x9;[ID] [int] NULL,&#xA;&#x9;[CJIS_NUM] [varchar](20) NULL,&#xA;&#x9;[DA_LOG_NUM] [varchar](20) NULL,&#xA;&#x9;[DEF_STATUS] [varchar](2) NULL,&#xA;&#x9;[DEF_STATUS_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[IDTYPE] [varchar](5) NULL,&#xA;&#x9;[INTERVIEW_DT] [datetime] NULL,&#xA;&#x9;[INTERVIEW_LOCATION] [varchar](5) NULL,&#xA;&#x9;[INTERVIEW_LOCATION_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[INTERVIEW_LOCKED] [bit] NULL,&#xA;&#x9;[INTERVIEW_REASON] [varchar](3) NULL,&#xA;&#x9;[INTERVIEW_REASON_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[INTERVIEW_SHIFT] [varchar](5) NULL,&#xA;&#x9;[INTERVIEW_TYPE] [varchar](2) NULL,&#xA;&#x9;[INTERVIEW_Type_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[INTERVIEWER_SPN] [varchar](10) NULL,&#xA;&#x9;[INTERVIEW_SUMMARY] [varchar](255) NULL,&#xA;&#x9;[INTERVIEW_STATUS] [varchar](2) NULL,&#xA;&#x9;[INTERVIEW_STATUS_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[NAME_SEQ_NUM] [varchar](10) NULL,&#xA;&#x9;[SPN] [varchar](10) NULL,&#xA;&#x9;[CONTACTED_SINCE_ARREST] [bit] NULL,&#xA;&#x9;[ROWSTATUS] [varchar](2) NULL,&#xA;&#x9;[CREATEDATE] [datetime] NULL,&#xA;&#x9;[CREATEUSER] [varchar](100) NULL,&#xA;&#x9;[UPDATEDATE] [datetime] NULL,&#xA;&#x9;[UPDATEUSER] [varchar](100) NULL,&#xA;&#x9;[LASTNAME] [varchar](75) NULL,&#xA;&#x9;[FIRSTNAME] [varchar](50) NULL,&#xA;&#x9;[MIDDLENAME] [varchar](50) NULL,&#xA;&#x9;[MANUAL_INTERVIEW] [bit] NULL,&#xA;&#x9;[MANUALLY_ENTERED_BY] [varchar](80) NULL,&#xA;&#x9;[REFUSAL_IND] [bit] NULL,&#xA;&#x9;[LastUpdateDTS] [datetime] NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -14033,7 +14279,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[PRPIN].[vBM_ReportedRecordSTG]</property>
+                  name="OpenRowset">[pts].[ReportedRecordSTG]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -14274,28 +14520,27 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="INTERVIEW_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="PROBATION_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="PAROLE_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BOND_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="BOND_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
@@ -14304,7 +14549,8 @@
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="CREATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEDATE]"
@@ -14313,77 +14559,80 @@
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPDATEUSER]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="UPDATEUSER" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROWSTATUS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="2"
                       name="ROWSTATUS" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PROBATION_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="PROBATION_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAROLE_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="PAROLE_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIOR_CRIM_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="PRIOR_CRIM_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIOR_JUV_IND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="PRIOR_JUV_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WHEN_LEFT_GANG]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="WHEN_LEFT_GANG" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CCH_COMMENTS]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="CCH_COMMENTS" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GANG_IND]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="50"
                       name="GANG_IND" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GANG_IND_DESCRIPTION]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="255"
                       name="GANG_IND_DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIOR_CONVICTION]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="PRIOR_CONVICTION" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTED_ATTORNEY]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="CONTACTED_ATTORNEY" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GANG_NAME]"
                       codePage="1252"
-                      dataType="text"
+                      dataType="str"
+                      length="100"
                       name="GANG_NAME" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRIM_CONV_REPORTED]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="CRIM_CONV_REPORTED" />
                     <externalMetadataColumn
                       refId="Package\vBM_ReportedRecord Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JUV_ADJ_REPORTED]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="bool"
                       name="JUV_ADJ_REPORTED" />
                   </externalMetadataColumns>
                 </input>
@@ -15035,7 +15284,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_ReportedRecordSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_ReportedRecordSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_ReportedRecordSTG](&#xA; ID&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_ID&#x9; VARCHAR(MAX) NULL,&#xA;PROBATION_IND&#x9; vARCHAR(MAX) NULL,&#xA;PROBATION_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PAROLE_IND&#x9; VARCHAR(MAX) NULL,&#xA;PAROLE_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;PRIOR_CRIM_IND&#x9; VARCHAR(MAX) NULL,&#xA;PRIOR_JUV_IND&#x9; VARCHAR(MAX) NULL,&#xA;WHEN_LEFT_GANG&#x9; VARCHAR(MAX) NULL,&#xA;CCH_COMMENTS&#x9; VARCHAR(MAX) NULL,&#xA;GANG_IND&#x9; VARCHAR(MAX) NULL,&#xA;GANG_IND_DESCRIPTION&#x9; VARCHAR(MAX) NULL,&#xA;BOND_IND&#x9; VARCHAR(MAX) NULL,&#xA;PRIOR_CONVICTION&#x9; VARCHAR(MAX) NULL,&#xA;CONTACTED_ATTORNEY&#x9; VARCHAR(MAX) NULL,&#xA;GANG_NAME&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL,&#xA;CRIM_CONV_REPORTED&#x9; VARCHAR(MAX) NULL,&#xA;JUV_ADJ_REPORTED&#x9; VARCHAR(MAX) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'pts'&#xA;    AND TABLE_NAME = 'ReportedRecordSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE [pts].[ReportedRecordSTG]&#xA;GO&#xA;&#xA;CREATE TABLE [pts].[ReportedRecordSTG](&#xA;&#x9;[ID] [int] NULL,&#xA;&#x9;[INTERVIEW_ID] [int] NULL,&#xA;&#x9;[PROBATION_IND] [varchar](50) NULL,&#xA;&#x9;[PROBATION_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[PAROLE_IND] [varchar](50) NULL,&#xA;&#x9;[PAROLE_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[PRIOR_CRIM_IND] [bit] NULL,&#xA;&#x9;[PRIOR_JUV_IND] [bit] NULL,&#xA;&#x9;[WHEN_LEFT_GANG] [varchar](50) NULL,&#xA;&#x9;[CCH_COMMENTS] [varchar](255) NULL,&#xA;&#x9;[GANG_IND] [varchar](50) NULL,&#xA;&#x9;[GANG_IND_DESCRIPTION] [varchar](255) NULL,&#xA;&#x9;[BOND_IND] [bit] NULL,&#xA;&#x9;[PRIOR_CONVICTION] [bit] NULL,&#xA;&#x9;[CONTACTED_ATTORNEY] [bit] NULL,&#xA;&#x9;[GANG_NAME] [varchar](100) NULL,&#xA;&#x9;[CREATEDATE] [datetime] NULL,&#xA;&#x9;[CREATEUSER] [varchar](100) NULL,&#xA;&#x9;[UPDATEDATE] [datetime] NULL,&#xA;&#x9;[UPDATEUSER] [varchar](100) NULL,&#xA;&#x9;[ROWSTATUS] [varchar](2) NULL,&#xA;&#x9;[CRIM_CONV_REPORTED] [bit] NULL,&#xA;&#x9;[JUV_ADJ_REPORTED] [bit] NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -15068,7 +15317,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[PRPIN].[vBM_ResidenceSTG]</property>
+                  name="OpenRowset">[pts].[ResidenceSTG]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -15265,13 +15514,11 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\vBM_Residence Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_Residence Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INTERVIEW_ID]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="i4"
                       name="INTERVIEW_ID" />
                     <externalMetadataColumn
                       refId="Package\vBM_Residence Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CREATEDATE]"
@@ -15905,7 +16152,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BE2407B1-94E8-42FF-9D3E-324D39A4BFAD}"
-          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'PRPIN'&#xA;    AND TABLE_NAME = 'vBM_ResidenceSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE  [PRPIN].[vBM_ResidenceSTG]&#xA;GO&#xA;CREATE TABLE [PRPIN].[vBM_ResidenceSTG](&#xA;ID&#x9; VARCHAR(MAX) NULL,&#xA;INTERVIEW_ID&#x9; VARCHAR(MAX) NULL,&#xA;NUM_CHILD_WITH_DEF&#x9; VARCHAR(MAX) NULL,&#xA;IN_HC_AREA&#x9; VARCHAR(MAX) NULL,&#xA;ADULT_DEPENDENTS_IN_HOME&#x9; VARCHAR(MAX) NULL,&#xA;HAVE_AUTO&#x9; VARCHAR(MAX) NULL,&#xA;VEHICLE_IN_YOUR_NAME&#x9; VARCHAR(MAX) NULL,&#xA;CHILDREN_COMM&#x9; VARCHAR(MAX) NULL,&#xA;TRANSPORTATION_COMM&#x9; VARCHAR(MAX) NULL,&#xA;ADDRESS_COMM&#x9; VARCHAR(MAX) NULL,&#xA;MOVED_TO_HC_REASON&#x9; VARCHAR(MAX) NULL,&#xA;TRANSPORTATION_TYPE&#x9; VARCHAR(MAX) NULL,&#xA;IN_HC_AREA_PERIOD&#x9; VARCHAR(MAX) NULL,&#xA;ADULTDEPENDANTRELATION&#x9; VARCHAR(MAX) NULL,&#xA;CREATEDATE&#x9;DATETIME NULL,&#xA;CREATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;UPDATEDATE&#x9;DATETIME NULL,&#xA;UPDATEUSER&#x9; VARCHAR(MAX) NULL,&#xA;ROWSTATUS&#x9; VARCHAR(MAX) NULL&#xA;&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(&#xA;  &#xA;  &#xA;  SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES &#xA;   WHERE &#xA;        TABLE_TYPE ='BASE TABLE'&#xA;    AND TABLE_SCHEMA = 'pts'&#xA;    AND TABLE_NAME = 'ResidenceSTG'&#xA;&#xA;  )&#xA;&#xA;DROP TABLE [pts].[ResidenceSTG]&#xA;GO&#xA;&#xA;&#xA;CREATE TABLE [pts].[ResidenceSTG](&#xA;&#x9;[ID] [int] NULL,&#xA;&#x9;[INTERVIEW_ID] [int] NULL,&#xA;&#x9;[NUM_CHILD_WITH_DEF] [varchar](max) NULL,&#xA;&#x9;[IN_HC_AREA] [varchar](max) NULL,&#xA;&#x9;[ADULT_DEPENDENTS_IN_HOME] [varchar](max) NULL,&#xA;&#x9;[HAVE_AUTO] [varchar](max) NULL,&#xA;&#x9;[VEHICLE_IN_YOUR_NAME] [varchar](max) NULL,&#xA;&#x9;[CHILDREN_COMM] [varchar](max) NULL,&#xA;&#x9;[TRANSPORTATION_COMM] [varchar](max) NULL,&#xA;&#x9;[ADDRESS_COMM] [varchar](max) NULL,&#xA;&#x9;[MOVED_TO_HC_REASON] [varchar](max) NULL,&#xA;&#x9;[TRANSPORTATION_TYPE] [varchar](max) NULL,&#xA;&#x9;[IN_HC_AREA_PERIOD] [varchar](max) NULL,&#xA;&#x9;[ADULTDEPENDANTRELATION] [varchar](max) NULL,&#xA;&#x9;[CREATEDATE] [datetime] NULL,&#xA;&#x9;[CREATEUSER] [varchar](max) NULL,&#xA;&#x9;[UPDATEDATE] [datetime] NULL,&#xA;&#x9;[UPDATEUSER] [varchar](max) NULL,&#xA;&#x9;[ROWSTATUS] [varchar](max) NULL&#xA;) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -15978,7 +16225,7 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
       DTS:DTSID="{db74122b-205c-48ae-ba37-007781ad8ad5}"
-      DTS:From="Package\vBM_Interview SQL Task 3"
+      DTS:From="Package\vBM_Interview SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\vBM_Interview Data Flow Task" />
@@ -16049,7 +16296,7 @@
           TopLeft="354,433" />
         <NodeLayout
           Size="205,42"
-          Id="Package\vBM_Interview SQL Task 3"
+          Id="Package\vBM_Interview SQL Task"
           TopLeft="25,429" />
         <NodeLayout
           Size="256,42"
@@ -16596,25 +16843,25 @@
         <NodeLayout
           Size="171,42"
           Id="Package\vBM_FinancialSTG Data Flow Task\OLE DB Destination"
-          TopLeft="581,151" />
+          TopLeft="582,150" />
         <NodeLayout
           Size="150,42"
           Id="Package\vBM_FinancialSTG Data Flow Task\OLE DB Source"
           TopLeft="219,150" />
         <EdgeLayout
           Id="Package\vBM_FinancialSTG Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="369,171.5">
+          TopLeft="369,171">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="212,0"
+              EndConnector="213,0"
               Start="0,0"
-              End="204.5,0">
+              End="205.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="204.5,0" />
+                    End="205.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16656,29 +16903,55 @@
     design-time-name="Package\vBM_Interview Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\vBM_Interview Data Flow Task\OLE DB Source"
-          TopLeft="219,150" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\vBM_Interview Data Flow Task\OLE DB Destination"
           TopLeft="581,151" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\vBM_Interview Data Flow Task\OLE DB Source"
+          TopLeft="38,149" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\vBM_Interview Data Flow Task\Derived Column"
+          TopLeft="355,150" />
         <EdgeLayout
           Id="Package\vBM_Interview Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="369,171.5">
+          TopLeft="188,170.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="212,0"
+              EndConnector="167,0"
               Start="0,0"
-              End="204.5,0">
+              End="159.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="204.5,0" />
+                    End="159.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\vBM_Interview Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="509,171.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72,0"
+              Start="0,0"
+              End="64.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
