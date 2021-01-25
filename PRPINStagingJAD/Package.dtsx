@@ -11,8 +11,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{0B20D0A9-8D97-4637-A58C-1FB38B03C81C}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{2E3D8EBC-B43E-45E8-A477-959D82B24D45}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2070,7 +2071,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_ComputerRecord SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -3629,7 +3630,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_DefendantAddressSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6184,7 +6185,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_DefendantSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6901,7 +6902,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_Education SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -11068,7 +11069,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_FinancialItem SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -12047,7 +12048,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_FinancialSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -13544,7 +13545,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_Interview SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="8">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -15291,7 +15292,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_ReportedRecord SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="9">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -16159,7 +16160,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="vBM_Residence SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="10">
+      DTS:ThreadHint="9">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -16568,7 +16569,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="v_JadPsaAssociatedOffenseSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="10">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -17375,7 +17376,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="v_JadPsaSTG SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="8">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -17850,6 +17851,30 @@
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="321,42"
+          Id="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task"
+          TopLeft="456,680" />
+        <NodeLayout
+          Size="294,42"
+          Id="Package\v_JadPsaAssociatedOffenseSTG SQL Task"
+          TopLeft="76,677" />
+        <NodeLayout
+          Size="229,42"
+          Id="Package\v_JadPsaSTG Data Flow Task"
+          TopLeft="458,615" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\v_JadPsaSTG SQL Task"
+          TopLeft="134,612" />
+        <NodeLayout
+          Size="276,42"
+          Id="Package\v_PsaCompleteJadSTG Data Flow Task"
+          TopLeft="438,741" />
+        <NodeLayout
+          Size="294,42"
+          Id="Package\v_PsaCompleteJadSTG SQL Task"
+          TopLeft="58,738" />
+        <NodeLayout
           Size="259,42"
           Id="Package\vBM_ComputerRecord Data Flow Task"
           TopLeft="457,43" />
@@ -18119,14 +18144,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="220,42"
-          Id="Package\v_JadPsaSTG SQL Task"
-          TopLeft="134,612" />
-        <NodeLayout
-          Size="229,42"
-          Id="Package\v_JadPsaSTG Data Flow Task"
-          TopLeft="458,615" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="354,634.5">
@@ -18149,14 +18166,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="294,42"
-          Id="Package\v_JadPsaAssociatedOffenseSTG SQL Task"
-          TopLeft="76,677" />
-        <NodeLayout
-          Size="321,42"
-          Id="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task"
-          TopLeft="456,680" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4 1]"
           TopLeft="370,699.5">
@@ -18179,14 +18188,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="294,42"
-          Id="Package\v_PsaCompleteJadSTG SQL Task"
-          TopLeft="58,738" />
-        <NodeLayout
-          Size="276,42"
-          Id="Package\v_PsaCompleteJadSTG Data Flow Task"
-          TopLeft="438,741" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4 1 1]"
           TopLeft="352,760.5">
@@ -18212,6 +18213,240 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task\OLE DB Destination"
+          TopLeft="558,223" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task\OLE DB Source"
+          TopLeft="247,197" />
+        <EdgeLayout
+          Id="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="404,218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="154,26"
+              Start="0,0"
+              End="146.5,26">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="73,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73,0"
+                    Point2="77,0"
+                    Point3="77,4" />
+                  <mssgle:LineSegment
+                    End="77,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77,22"
+                    Point2="77,26"
+                    Point3="81,26" />
+                  <mssgle:LineSegment
+                    End="146.5,26" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\v_JadPsaSTG Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\v_JadPsaSTG Data Flow Task\OLE DB Source"
+          TopLeft="247,197" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\v_JadPsaSTG Data Flow Task\OLE DB Destination"
+          TopLeft="558,223" />
+        <EdgeLayout
+          Id="Package\v_JadPsaSTG Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="404,218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="154,26"
+              Start="0,0"
+              End="146.5,26">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="73,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73,0"
+                    Point2="77,0"
+                    Point3="77,4" />
+                  <mssgle:LineSegment
+                    End="77,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77,22"
+                    Point2="77,26"
+                    Point3="81,26" />
+                  <mssgle:LineSegment
+                    End="146.5,26" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\v_JadPsaSTG Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\v_JadPsaSTG Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\v_PsaCompleteJadSTG Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\v_PsaCompleteJadSTG Data Flow Task\OLE DB Source"
+          TopLeft="247,197" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\v_PsaCompleteJadSTG Data Flow Task\OLE DB Destination"
+          TopLeft="558,223" />
+        <EdgeLayout
+          Id="Package\v_PsaCompleteJadSTG Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="404,218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="154,26"
+              Start="0,0"
+              End="146.5,26">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="73,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73,0"
+                    Point2="77,0"
+                    Point3="77,4" />
+                  <mssgle:LineSegment
+                    End="77,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77,22"
+                    Point2="77,26"
+                    Point3="81,26" />
+                  <mssgle:LineSegment
+                    End="146.5,26" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\v_PsaCompleteJadSTG Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\v_PsaCompleteJadSTG Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\vBM_ComputerRecord Data Flow Task">
     <LayoutInfo>
@@ -18883,234 +19118,6 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\v_JadPsaSTG Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="157,42"
-          Id="Package\v_JadPsaSTG Data Flow Task\OLE DB Source"
-          TopLeft="247,197" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\v_JadPsaSTG Data Flow Task\OLE DB Destination"
-          TopLeft="558,223" />
-        <EdgeLayout
-          Id="Package\v_JadPsaSTG Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="404,218">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="154,26"
-              Start="0,0"
-              End="146.5,26">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="73,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="73,0"
-                    Point2="77,0"
-                    Point3="77,4" />
-                  <mssgle:LineSegment
-                    End="77,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="77,22"
-                    Point2="77,26"
-                    Point3="81,26" />
-                  <mssgle:LineSegment
-                    End="146.5,26" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\v_JadPsaSTG Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\v_JadPsaSTG Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="157,42"
-          Id="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task\OLE DB Source"
-          TopLeft="247,197" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task\OLE DB Destination"
-          TopLeft="558,223" />
-        <EdgeLayout
-          Id="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="404,218">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="154,26"
-              Start="0,0"
-              End="146.5,26">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="73,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="73,0"
-                    Point2="77,0"
-                    Point3="77,4" />
-                  <mssgle:LineSegment
-                    End="77,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="77,22"
-                    Point2="77,26"
-                    Point3="81,26" />
-                  <mssgle:LineSegment
-                    End="146.5,26" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\v_JadPsaAssociatedOffenseSTG Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\v_PsaCompleteJadSTG Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="157,42"
-          Id="Package\v_PsaCompleteJadSTG Data Flow Task\OLE DB Source"
-          TopLeft="247,197" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\v_PsaCompleteJadSTG Data Flow Task\OLE DB Destination"
-          TopLeft="558,223" />
-        <EdgeLayout
-          Id="Package\v_PsaCompleteJadSTG Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="404,218">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="154,26"
-              Start="0,0"
-              End="146.5,26">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="73,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="73,0"
-                    Point2="77,0"
-                    Point3="77,4" />
-                  <mssgle:LineSegment
-                    End="77,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="77,22"
-                    Point2="77,26"
-                    Point3="81,26" />
-                  <mssgle:LineSegment
-                    End="146.5,26" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\v_PsaCompleteJadSTG Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\v_PsaCompleteJadSTG Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
